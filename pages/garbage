@@ -1,0 +1,117 @@
+<!-- <div style={{ width: "1250px", display: "flex" }}>
+        <div
+          style={{
+            backgroundColor: "red",
+            height: "200px",
+            width: "250px",
+            float: "left",
+          }}
+        ></div>
+        <div
+          style={{
+            backgroundColor: "blue",
+            height: "300px",
+            width: "700px",
+            marginLeft: "10px",
+          }}
+        ></div>
+        <div>
+
+        <div
+          style={{
+            backgroundColor: "green",
+            height: "200px",
+            width: "250px",
+            clear: "both",
+          }}
+        ></div>
+        <div
+          style={{
+            backgroundColor: "purple",
+            height: "150px",
+            width: "250px",
+            marginTop: "10px",
+          }}
+        ></div>
+        </div>
+      </div>
+
+
+
+
+
+
+      import React, { useState } from 'react';
+      
+      function QuizQuestion({ question, options, answer, onOptionClick }) {
+      const [answered, setAnswered] = useState(false);
+      const [correct, setCorrect] = useState(false);
+      
+      const handleOptionClick = (option) => {
+      if (!answered) {
+      const isCorrect = option === answer;
+      setAnswered(true);
+      setCorrect(isCorrect);
+      onOptionClick(isCorrect);
+      }
+      };
+      
+      return (
+      <div className="quiz-question">
+        <h3>{question}</h3>
+        <ul>
+          {options.map((option, index) => (
+          <li key={index} className={ answered && option===answer ? 'correct' : answered && option !==answer ? 'incorrect'
+            : '' } onClick={()=> handleOptionClick(option)}
+            >
+            {option}
+          </li>
+          ))}
+        </ul>
+        {answered && !correct && <p>The correct answer is {answer}</p>}
+      </div>
+      );
+      }
+      
+      function QuizSection({ questions, onQuestionAnswer }) {
+      return (
+      <div className="quiz-section">
+        {questions.map((question, index) => (
+        <QuizQuestion key={index} question={question.question} options={question.options} answer={question.answer}
+          onOptionClick={(isCorrect)=> onQuestionAnswer(index, isCorrect)}
+          />
+          ))}
+      </div>
+      );
+      }
+      
+      function QuizPage() {
+      const [answers, setAnswers] = useState([]);
+      
+      const handleQuestionAnswer = (index, isCorrect) => {
+      const newAnswers = [...answers];
+      newAnswers[index] = isCorrect;
+      setAnswers(newAnswers);
+      };
+      
+      return (
+      <div className="quiz-page">
+        <QuizSection questions={[ { question: "What is the capital of France?" , options: ["Paris", "London" , "Berlin"
+          , "Rome" ], answer: "Paris" , }, { question: "What is the currency of Japan?" , options: ["Yen", "Dollar" , "Euro"
+          , "Pound" ], answer: "Yen" , }, { question: "What is the largest planet in our solar system?" , options:
+          ["Jupiter", "Saturn" , "Mars" , "Venus" ], answer: "Jupiter" , }, // add more questions here ]}
+          onQuestionAnswer={handleQuestionAnswer} />
+        <QuizSection questions={[ { question: 'Who is the author of "To Kill a Mockingbird"?' , options: [ "Harper Lee"
+          , "F. Scott Fitzgerald" , "William Faulkner" , "John Steinbeck" , ], answer: "Harper Lee" , }, {
+          question: "What is the smallest country in the world?" , options: ["Vatican City", "Monaco" , "Nauru" , "Tuvalu" ],
+          answer: "Vatican City" , }, { question: "What is the highest mountain in Africa?" , options: [ "Kilimanjaro"
+          , "Mount Kenya" , "Mount Stanley" , "Mount Meru" , ], answer: "Kilimanjaro" , }, // add more questions here ]}
+          onQuestionAnswer={handleQuestionAnswer} />
+        <QuizSection questions={[ { question: "What is the largest desert in the world?" , options: ["Sahara", "Arctic"
+          , "Gobi" , "Kalahari" ], answer: "Sahara" , }, ]} onQuestionAnswer={handleQuestionAnswer} />
+        <button onClick={()=> console.log(answers)}>Submit Answers</button>
+      </div>
+      );
+      }
+      
+      export default QuizPage; -->

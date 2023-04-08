@@ -1,0 +1,52 @@
+{
+  "name": "myapp",
+  "homepage": "http://themoneyinvest.com",
+  "description": "my react application",
+  "version": "0.1.0",
+  "private": "true",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sass": "sass --watch src/styles/main.scss:src/styles/main.css"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.10",
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/react-dom": "18.0.11",
+    "antd": "^5.2.0",
+    "axios": "^1.3.4",
+    "babel-plugin-macros": "^3.1.0",
+    "eslint-config-next": "13.1.6",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.2.0",
+    "html-react-parser": "^3.0.12",
+    "module": "^1.0.0",
+    "moment": "^2.29.4",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-burger-menu": "^3.0.9",
+    "react-dom": "^18.2.0",
+    "react-multi-carousel": "^2.8.2",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^2.1.3",
+    "react-ts-tradingview-widgets": "^1.0.14"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@types/node": "18.13.0",
+    "@types/react": "18.0.28",
+    "autoprefixer": "^10.4.14",
+    "eslint-config-airbnb": "^19.0.4",
+    "postcss": "^8.4.21",
+    "sass": "^1.59.2",
+    "tailwindcss": "^3.2.7",
+    "typescript": "4.9.5"
+  }
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+
+.HeaderContainer {
+    /* position: fixed; */
+    /* background-color: #f2f3eb; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden;
+    background-color: #ffffff; */
+}
+
+@media (min-width: 768px) {
+    .headerBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        .logo {
+            width: 8%;
+        }
+    }
+}
+
+
+.headingText {
+    font-family: 'Gloock', serif;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(84, 84, 84);
+    font-weight: 500;
+    font-size: 2.7rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .headerBox {
+        display: flex;
+        /* flex-direction: column; */
+        padding: 8% 10% 8% 10%;
+    }
+
+    .PhoneHead {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .BellIconDiv {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .headerBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headingText {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 18%;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .BellIcon {
+        display: none;
+
+    }
+}

@@ -1,0 +1,150 @@
+/* .EbookContainer{
+ background-color: #f2f3eb; }
+        */
+
+.EbookSection {
+background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    opacity: 20px;
+    padding: 15%;    
+    position: relative;
+    padding-top: 0%;
+}
+
+
+.EbookSection__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .EbookSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.BookContainer {
+    background-color: #f2f3eb 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    border: solid;
+    color: #0f4772;
+    padding: 2%;
+    box-shadow: 4px 4px 5px black;
+    border-radius: 5%;
+    width: 310px;
+    height: 340px;
+    text-align: center;
+}
+
+.BookImage {
+    align-self: center;
+    width: 120px;
+    height: 180px;
+    margin: 0 40px 20px 40px;
+    background-color: #ccc;
+}
+
+
+.HeadText {
+    text-align: center;
+    color: #0f4772;
+    font-weight: 800;
+    
+}
+
+.Downloadbtn {
+    width: 50%;
+    align-self: center
+}
+
+.EbookTitle {
+    text-align: center;
+    font-size: large;
+    margin-bottom: 5%;
+}
+
+.EbookHead {
+    position: relative;
+    height: 200px;
+    border: 3px solid;
+    margin: 25px;
+    top: -30px;
+    background-color: #F5F2EA;
+}
+
+
+
+
+
+body {
+    background: rgba(218, 218, 218, 1)
+}
+
+.EbookTitle {
+    color: #111;
+    /* position: absolute; */
+    z-index: 1;
+    top: 1px;
+    /* transform: translate(-25%, -65%); */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+}
+
+
+.photo {
+    top: 50%;
+    left: 50%;
+    display: block;
+    
+}
+
+.photo img {
+    width: 200px;
+    height: 280px;
+        box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.499);
+        display: block;
+        transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        margin-top: -10px;
+
+}
+
+.photo:hover img {
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.photo:hover img,
+.photo:hover .glow-wrap {
+    margin-top: 0;
+}
+
+
+.photo .glow-wrap {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    margin-top: -10px;
+}
+
+.photo .glow {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255, 255, 255, .2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
