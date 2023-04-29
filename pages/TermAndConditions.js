@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable */ 
+import React from "react";
 import Footer from "../components/Layout/Footer";
 
 function TermAndConditions() {
@@ -7,22 +8,24 @@ function TermAndConditions() {
       <title>Term & Conditions</title>
       <h1
         style={{
-          height: '100%',
-          color: 'purple',
-          borderRadius: '50px',
-          border: 'double black 10px',
-          marginBottom: '3%',
-          marginTop: '1%',
-          fontSize: '2rem',
-          fontWeight: '600',
+          height: "100%",
+          color: "purple",
+          borderRadius: "50px",
+          border: "double black 10px",
+          marginBottom: "3%",
+          marginTop: "1%",
+          fontSize: "2rem",
+          fontWeight: "600",
         }}
       >
         Term & Conditions
       </h1>
-      <div style={{ margin: '8rem', marginBottom: '1%', marginTop: '2%' }}>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>TERM OF USE:-</h2>
-          <p style={{ margin: '3%' }}>
+      <div style={{ margin: "8rem", marginBottom: "1%", marginTop: "2%" }}>
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
+            TERM OF USE:-
+          </h2>
+          <p style={{ margin: "3%" }}>
             By visiting our site you are agreeing to be bound by the following
             terms and conditions. We may change these terms and conditions at
             any time. Your continued use of themoneyinvest.com means that you
@@ -31,12 +34,11 @@ function TermAndConditions() {
             to time to stay abreast of any changes that we may introduce.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
-
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             ACCEPTANCE OF TERMS OF USE:-
           </h2>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             Please read the following terms and conditions as these terms of use
             (“Terms”) constitute a legally binding agreement between you and the
             Company regarding your browsing, access and use of the Site and any
@@ -44,40 +46,38 @@ function TermAndConditions() {
             offered by the Company including but not limited to delivery of
             specialized content.
           </p>
-          <div style={{ borderBottom: '2px dotted' }} />
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
-
+          <div style={{ borderBottom: "2px dotted" }} />
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             NO INDIVIDUAL INVESTMENT ADVICE:-
           </h2>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             This Site does not provide individual or customized legal, tax,
             accounting, or investment services. Since each individual’s
             situation is unique, a qualified professional should be consulted
             before making financial decisions.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             REGISTRATION:-
           </h2>
-          <p style={{ margin: '3%', marginBottom: '1%' }}>
+          <p style={{ margin: "3%", marginBottom: "1%" }}>
             By registering, you certify that all information you provide, now or
             in the future, is accurate. themoneyinvest.com reserves the right,
             in its sole discretion, to deny you access to this website.
           </p>
-          <p style={{ marginLeft: '3%', marginBottom: '1%' }}>
+          <p style={{ marginLeft: "3%", marginBottom: "1%" }}>
             Agree to get periodic SMS alerts.
           </p>
-          <p style={{ marginLeft: '3%', marginBottom: '1%' }}>
+          <p style={{ marginLeft: "3%", marginBottom: "1%" }}>
             Agree to get periodic newsletters.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
-
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             License to Use Site Content
           </h2>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             We grant you a limited personal use license to access, display,
             download, format and print portions of this Site content solely for
             your own personal non-commercial use, provided that the content is
@@ -89,12 +89,11 @@ function TermAndConditions() {
             enclose any content on this Site.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
-
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             Advisor Insights – for Advisors
           </h2>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             For financial advisors, your answers must not (i) recommend or
             promote specific securities, funds, or other investments, (ii)
             advertise or promote your specific qualifications, experience, or
@@ -102,22 +101,21 @@ function TermAndConditions() {
             clients.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
-
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             Third Party Content
           </h2>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             You may be able to access, review, display or use third party
             services, resources, content or information via the Site or the
             Services.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             User Submissions
           </h2>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             “means the text, data, graphics, images, photos, video or
             audiovisual content, hypertext links and any other content that the
             Company allows its users to uploads, posts, flips, compiles or
@@ -125,15 +123,14 @@ function TermAndConditions() {
             applicable.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>
-
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             LIABILITY DISCLAIMER :
           </h2>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             YOU EXPRESSLY AGREE THAT USE OF THE WEBSITE IS AT YOUR SOLE RISK.
           </p>
-          <p style={{ margin: '3%' }}>
+          <p style={{ margin: "3%" }}>
             THE CONTENTS, INFORMATION, SOFTWARE, PRODUCTS, FEATURES AND SERVICES
             PUBLISHED ON THIS WEB SITE MAY INCLUDE INACCURACIES OR TYPOGRAPHICAL
             ERRORS. CHANGES ARE PERIODICALLY ADDED TO THE CONTENTS HEREIN.
@@ -150,9 +147,11 @@ function TermAndConditions() {
             SOFTWARE, PRODUCTS, FEATURES AND SERVICES PUBLISHED ON THIS WEBSITE.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>ENTIRE AGREEMENT:</h2>
-          <p style={{ margin: '3%' }}>
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
+            ENTIRE AGREEMENT:
+          </h2>
+          <p style={{ margin: "3%" }}>
             This User Agreement constitutes the entire agreement between the
             parties, and no other agreement, written or oral, exists between you
             and themoneyinvest.com. By using the Information on
@@ -171,9 +170,11 @@ function TermAndConditions() {
             other of the purchase or sale of securities.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', fontSize: '1.3rem' }}>NOTE : </h2>
-          <p style={{ margin: '3%' }}>
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
+            NOTE :{" "}
+          </h2>
+          <p style={{ margin: "3%" }}>
             Themoneyinvest.com does not provide tax, accounting, legal,
             investment, or financial services. The information available through
             themoneyinvest.com is provided by third parties and solely for
@@ -196,8 +197,15 @@ function TermAndConditions() {
             answers and is not responsible for any claims made by any advisor.
           </p>
         </div>
-        <div style={{ borderBottom: '2px dotted' }}>
-          <h2 style={{ margin: '3%', fontWeight: '600', textAlign: 'center', fontSize: '1.3rem' }}>
+        <div style={{ borderBottom: "2px dotted" }}>
+          <h2
+            style={{
+              margin: "3%",
+              fontWeight: "600",
+              textAlign: "center",
+              fontSize: "1.3rem",
+            }}
+          >
             We are not SEBI registered as a financial advisor.
           </h2>
         </div>

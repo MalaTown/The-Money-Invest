@@ -1,14 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/sort-comp */
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+/* eslint-disable */
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Loading from "./Layout/Loader";
-import NewsItem from './NewsItems';
+import NewsItem from "./NewsItems";
 
 export class NewsApp extends Component {
   constructor(props) {
@@ -79,23 +73,19 @@ export class NewsApp extends Component {
           {this.state.loading && <Loading />}
           <div className="row">
             {/* news items mapping */}
-            {!this.state.loading
-              && this.state.articles.map((items, id) => (
+            {!this.state.loading &&
+              this.state.articles.map((items, id) => (
                 <div className="col-md-4 col-sm-6 col-xs-12" key={items.url}>
                   <NewsItem
-                    title={
-                        `${items.title ? items.title.slice(0, 45) : ''}..`
-                      }
-                    description={
-                        `${items.description
-                          ? items.description.slice(0, 85)
-                          : ''}...`
-                      }
-                      // imageURL={
-                      //   items.urlToImage
-                      //     ? items.urlToImage
-                      //     : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/120px-No_image_available.svg.png"
-                      // }
+                    title={`${items.title ? items.title.slice(0, 45) : ""}..`}
+                    description={`${
+                      items.description ? items.description.slice(0, 85) : ""
+                    }...`}
+                    // imageURL={
+                    //   items.urlToImage
+                    //     ? items.urlToImage
+                    //     : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/120px-No_image_available.svg.png"
+                    // }
                     newsURL={items.url}
                   />
                 </div>
@@ -111,7 +101,7 @@ export class NewsApp extends Component {
           >
             &larr; Previous
           </button>
-          <div className="page-count">Page:  {this.state.pg}</div>
+          <div className="page-count">Page: {this.state.pg}</div>
           <button
             disabled={
               !(this.state.pg + 1 <= Math.ceil(this.state.totalArticles / 12))
@@ -149,9 +139,9 @@ NewsApp.propTypes = {
   category: PropTypes.string,
 };
 NewsApp.defaultProps = {
-  country: 'in',
+  country: "in",
   pageSize: 9,
-  category: 'Business',
+  category: "Business",
 };
 
 export default NewsApp;

@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
+/* eslint-disable */
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";

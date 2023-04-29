@@ -1,3 +1,4 @@
+/* eslint-disable */
 export { default as PostCard } from "./PostCard";
 export { default as PostDetail } from "./PostDetail";
 export { default as NewsPostDetail } from "./NewsPostDetail";

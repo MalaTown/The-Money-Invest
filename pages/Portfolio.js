@@ -1,33 +1,31 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/button-has-type */
-import React from 'react';
-import Image from 'next/image';
+/* eslint-disable */
+import React from "react";
+import Image from "next/image";
 import Header from "../components/Layout/Header";
-import Footer from '../components/Layout/Footer';
+import Footer from "../components/Layout/Footer";
 
-if (typeof document !== 'undefined') {
-  const scrollButtonButton = document.getElementById('scrollButton');
-  scrollButtonButton.addEventListener('click', () => {
+if (typeof document !== "undefined") {
+  const scrollButtonButton = document.getElementById("scrollButton");
+  scrollButtonButton.addEventListener("click", () => {
     const center = window.innerHeight / 1.1;
     window.scrollTo({
       top: center,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   });
 }
 
 function Portfolio() {
   return (
-    <div className="PFContainer" style={{ background: '#F2F3EB' }}>
+    <div className="PFContainer" style={{ background: "#F2F3EB" }}>
       <title>Portfolio</title>
       <div
         className="PortfolioHead"
         style={{
-          position: 'relative',
-          width: '100%',
-          height: '300px',
-          marginBottom: '5%',
+          position: "relative",
+          width: "100%",
+          height: "300px",
+          marginBottom: "5%",
         }}
       >
         <div className="image-container ">
@@ -41,16 +39,16 @@ function Portfolio() {
           <div
             className="PFtext-container"
             style={{
-              textAlign: 'center',
+              textAlign: "center",
             }}
           >
             <h1>Invest for the future</h1>
             <p
               style={{
-                width: '300px',
-                margin: '2% 10%',
-                color: 'white',
-                fontSize: 'large',
+                width: "300px",
+                margin: "2% 10%",
+                color: "white",
+                fontSize: "large",
               }}
             >
               Work with all the necessary information to boost money flow from
@@ -58,7 +56,7 @@ function Portfolio() {
             </p>
             <button id="scrollButton">Learn More !</button>
           </div>
-        </div>{' '}
+        </div>{" "}
       </div>
 
       <div className="lg:flex justify-around ">

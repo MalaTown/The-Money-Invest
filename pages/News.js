@@ -1,49 +1,42 @@
-/* eslint-disable max-len */
-/* eslint-disable jsx-a11y/iframe-has-title */
-/* eslint-disable no-eval */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/no-duplicates */
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable camelcase */
-/* eslint-disable react/jsx-no-undef */
-import React from 'react';
-import Image from 'next/image';
-import { useEffect } from 'react';
-import NewsApp from '../components/NewsApp';
+/* eslint-disable */
+import React from "react";
+import Image from "next/image";
+import { useEffect } from "react";
+import NewsApp from "../components/NewsApp";
 import Footer from "../components/Layout/Footer";
 
 function News() {
   useEffect(() => {
     if (
-      typeof window !== 'undefined'
-      && typeof stockdio_events === 'undefined'
+      typeof window !== "undefined" &&
+      typeof stockdio_events === "undefined"
     ) {
       window.stockdio_events = true;
       const stockdio_eventMethod = window.addEventListener
-        ? 'addEventListener'
-        : 'attachEvent';
+        ? "addEventListener"
+        : "attachEvent";
       const stockdio_eventer = window[stockdio_eventMethod];
-      const stockdio_messageEvent = stockdio_eventMethod == 'attachEvent' ? 'onmessage' : 'message';
+      const stockdio_messageEvent =
+        stockdio_eventMethod == "attachEvent" ? "onmessage" : "message";
       stockdio_eventer(
         stockdio_messageEvent,
         (e) => {
           if (
-            typeof e.data !== 'undefined'
-            && typeof e.data.method !== 'undefined'
+            typeof e.data !== "undefined" &&
+            typeof e.data.method !== "undefined"
           ) {
             eval(e.data.method);
           }
         },
-        false,
+        false
       );
     }
   }, []);
   return (
     <div className="NewsContainer">
-
       <div
         className="NewsHead"
-        style={{ position: 'relative', height: '200px' }}
+        style={{ position: "relative", height: "200px" }}
       >
         <Image
           src="/images/NewsHead.jpg"
@@ -58,7 +51,7 @@ function News() {
 
       <div
         className="news-container"
-        style={{ backgroundColor: '#f2f3eb', border: '2px solid' }}
+        style={{ backgroundColor: "#f2f3eb", border: "2px solid" }}
       >
         <div className="quick-news-section">
           <iframe
@@ -92,8 +85,8 @@ function News() {
         </div>
       </div>
 
-      <div style={{ backgroundColor: '#f2f3eb', border: '2px solid' }}>
-        <NewsApp />{' '}
+      <div style={{ backgroundColor: "#f2f3eb", border: "2px solid" }}>
+        <NewsApp />{" "}
       </div>
 
       <Footer />

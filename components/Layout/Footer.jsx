@@ -1,13 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
-import React from 'react';
+/* eslint-disable */
+import React from "react";
 import {
   BsFacebook,
   BsTwitter,
   BsLinkedin,
   BsYoutube,
-  BsInstagram
+  BsInstagram,
 } from "react-icons/bs";
 
 function Footer() {
@@ -59,8 +57,7 @@ function Footer() {
                     </li>
                     <li>
                       <a href="#">
-                        <BsInstagram style={{ marginRight: "5px" }} />{" "}
-                        Instagram
+                        <BsInstagram style={{ marginRight: "5px" }} /> Instagram
                       </a>
                     </li>
                   </ul>

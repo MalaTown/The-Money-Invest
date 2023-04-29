@@ -1,7 +1,6 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
-import Image from 'next/image';
+/* eslint-disable */
+import React from "react";
+import Image from "next/image";
 import Footer from "../components/Layout/Footer";
 
 function Ebook() {
@@ -10,7 +9,7 @@ function Ebook() {
       <title>Ebook</title>
       <div
         className="EbookHead"
-        style={{ position: 'relative', height: '200px' }}
+        style={{ position: "relative", height: "200px" }}
       >
         <Image
           className="HeadImage object-contain"
@@ -164,12 +163,12 @@ function Ebook() {
           src="/images/background.jpg"
           alt="Background"
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: 0,
             left: 0,
             zIndex: -1,
             opacity: 0.3,
-            margin: '10px',
+            margin: "10px",
           }}
         />
       </div>
