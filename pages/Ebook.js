@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import Image from 'next/image';
-import Footer from '../components/Footer';
+import Footer from "../components/Layout/Footer";
 
 function Ebook() {
   return (

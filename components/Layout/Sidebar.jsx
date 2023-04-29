@@ -34,8 +34,11 @@ function Sidebar() {
         <a className="menu-item" href="/AboutUs">
           About-Us
         </a>
+        <a className="menu-item" href="/Quiz">
+          Quiz
+        </a>
         <a className="menu-item" href="/Login">
-          Login
+          Login/SignUp
         </a>
       </Menu>
     </div>

@@ -384,3 +384,21 @@ export const getRecentPosts = async () => {
 
 //   return result.newsposts.edges;
 // };
+
+
+export const GET_QUIZ_QUESTIONS = async () => {
+const query = gql`
+  query GetQuizQuestions($difficulty: Difficulty!) {
+    quizQuestions(where: { difficulty: $difficulty }) {
+      id
+      questionTitle
+      options
+      correctAnswer
+    }
+  }
+`;
+
+const result = await request(graphqlAPI, query);
+
+  return result.quizQuestions;
+};

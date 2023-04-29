@@ -29,92 +29,98 @@ function Content({ newsposts }) {
         }
       >
         <h5 className="TagLine"> YOUR FINANACIAL MARKET BOSS </h5>
-        <h1 className="Heading" style={{ textAlign: 'start' }}>
+        <h1 className="Heading" style={{ textAlign: "start" }}>
           The Money Invest
         </h1>
 
-        <div style={{ display: 'flex', fontWeight: '700' }}>
-          <div className="HomeLinksDiv">
-            {/* <FontAwesomeIcon icon={solid("user")} />
-             */}
-            <Image
-              className="w-14 h-14 logoimage border-4 border-blue-900 rounded-full p-1"
-              src="/images/StockPhone.png"
+        <div style={{ display: "flex", fontWeight: "700" }}>
+          {/* <FontAwesomeIcon icon={solid("user")} />
+           */}
+          <div>
+            <img
+              // className="w-14 h-14 logoimage border-4 border-blue-900 rounded-full p-1"
+              src="/images/Stock_top_icon.png"
               height="40"
-              width="40"
+              width="130"
               alt="StockAccount"
+              href="https://zerodha.com/open-account?c=AL3820"
+              className="topicons"
             />
-            <a
+            {/* <a
               className="Headlink md:text-sm bg-blue-300"
               style={{
-                textDecoration: 'none',
+                textDecoration: "none",
               }}
               href="https://zerodha.com/open-account?c=AL3820"
             >
-              Open Demat Account{' '}
-            </a>
+              Open Demat Account{" "}
+            </a> */}
           </div>
-          <div className="HomeLinksDiv">
-            <Image
-              className="w-14 h-14 logoimage border-4 border-blue-900 rounded-full p-1"
-              src="/images/EbookLogo.png"
+          <div>
+            <img
+              // className="w-14 h-14 logoimage border-4 border-blue-900 rounded-full p-1"
+              src="/images/Ebook_top_icon.png"
               height="40"
-              width="40"
+              width="130"
               alt="EBooks"
+              href="./Ebook"
+              className="topicons"
             />
 
-            <a
+            {/* <a
               className="Headlink md:text-sm bg-blue-300"
               style={{
-                textDecoration: 'none',
+                textDecoration: "none",
               }}
               href="./Ebook"
             >
-              E-Book{' '}
-            </a>
+              E-Book{" "}
+            </a> */}
           </div>
-          <div className="HomeLinksDiv">
-            <Image
-              className="w-14 h-14  logoimage border-4 border-blue-900 rounded-full p-1 "
-              src="/images/StockPhone.png"
+          <div>
+            <img
+              // className="w-14 h-14  logoimage border-4 border-blue-900 rounded-full p-1 "
+              src="/images/Stock_top_icon.png"
+              width="130"
               height="40"
-              width="40"
               alt="Crypto"
+              href=""
+              className="topicons"
             />
 
-            <a
+            {/* <a
               className="Headlink md:text-sm bg-blue-300"
               style={{
-                textDecoration: 'none',
+                textDecoration: "none",
               }}
               href=""
             >
               Open Crypto Account
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
       <div
-        style={{ display: 'flex' }}
+        style={{ display: "flex" }}
         className=" content-box lg:mx-16 flex flex-col md:flex-row"
       >
         <div className="row-span-3">
           <div
             className="p-7"
             style={{
-              backgroundColor: '#0f4772',
-              boxShadow: 'black 0px 2px 10px',
-              borderRadius: '10px',
+              backgroundColor: "#0f4772",
+              boxShadow: "black 0px 2px 10px",
+              borderRadius: "10px",
             }}
           >
             <div
               className="PollContainer"
               style={{
-                width: '100%',
+                width: "100%",
                 backgroundImage: "url('./images/QuizBg.png')",
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
                 // opacity: "0.7"
               }}
             >
@@ -125,13 +131,13 @@ function Content({ newsposts }) {
               <div className="MStext">
                 <a className="text-gray-600 " href="">
                   Learn More
-                </a>{' '}
-                about Market Status{' '}
+                </a>{" "}
+                about Market Status{" "}
               </div>
             </div>
           </div>
 
-          <div className="DivChart" style={{ width: '100%' }}>
+          <div className="DivChart" style={{ width: "100%" }}>
             <h1>Market Data</h1>
             <StockdioChart />
           </div>
@@ -139,27 +145,27 @@ function Content({ newsposts }) {
         <div
           className="p-7 my-4 lg:ml-20 md:m-0 sm:m-0"
           style={{
-            backgroundColor: '#0f4772',
-            boxShadow: 'black 0px 2px 10px',
-            borderRadius: '10px',
+            backgroundColor: "#0f4772",
+            boxShadow: "black 0px 2px 10px",
+            borderRadius: "10px",
             backgroundImage: "url('./images/QuickNewsBG.png')",
             // width: "400px",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            height: '500px',
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            height: "500px",
           }}
         >
           <div
             className="NewsBlock lg:w-72 md:w-full"
             style={{
               // backgroundColor: "white",
-              border: '1px solid',
-              height: '396px',
-              padding: '20px',
-              position: 'relative',
-              top: '10%',
-              marginRight: '32px',
+              border: "1px solid",
+              height: "396px",
+              padding: "20px",
+              position: "relative",
+              top: "10%",
+              marginRight: "32px",
             }}
           >
             <h1>Latest Posts</h1>

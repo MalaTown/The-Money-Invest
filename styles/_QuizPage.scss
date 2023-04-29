@@ -1,66 +1,33 @@
-/* App.css */
-
-/* Set the background color of the body to a light gray */
-/* body {
-    background-color: #f2f2f2;
-} */
-
-/* Center the quiz container */
-.quiz-container {
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-/* Style the header */
-.header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Style the quiz question */
-.question {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-/* Style the answer options */
-.answer {
+.option-button {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
     border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-/* Style the submit button */
-.submit-button {
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    color: white;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
+    margin: 5px;
     padding: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Style the results section */
-.results {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-    padding: 20px;
+.selected {
+    background-color: #0066cc;
+    color: #ffffff;
 }
 
-/* Style the result text */
-.result-text {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.correct {
+    background-color: #00cc00;
+    color: #ffffff;
+}
+
+.incorrect{
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+.option-button.correct {
+    background-color: green;
+}
+
+.option-button.incorrect {
+    background-color: red;
 }

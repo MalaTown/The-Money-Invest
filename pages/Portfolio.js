@@ -3,8 +3,8 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
 import Image from 'next/image';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from "../components/Layout/Header";
+import Footer from '../components/Layout/Footer';
 
 if (typeof document !== 'undefined') {
   const scrollButtonButton = document.getElementById('scrollButton');

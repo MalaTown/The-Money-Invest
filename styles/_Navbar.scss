@@ -35,7 +35,6 @@
          display: flex;
          flex-direction: row;
          align-items: center;
-         flex-wrap: wrap;
          max-width: 100%;
          justify-content: flex-start;
      }
@@ -90,15 +89,16 @@
          display: flex;
          justify-content: center;
      }
-     .NavItemDiv{
-        margin-right: 0;
-        margin-left: 20px;
+
+     .NavItemDiv {
+         margin-right: 0;
+         margin-left: 20px;
      }
 
      .NavItems {
          font-size: 0.75rem;
          margin-right: 10px;
-     } 
+     }
 
      .Ext {
          display: none;
@@ -108,8 +108,8 @@
          display: none;
      }
  }
-
- @media (min-width: 768px) {
+ 
+@media (min-width: 768px) {
      Nav {
 
          position: relative;
@@ -118,13 +118,13 @@
          .NavItemDiv {
              list-style: none;
              display: flex;
-             margin-right: 2.5rem;
+             margin-left: 14rem;
 
              .NavItems {
                  position: relative;
                  display: block;
-                display: flex;
-                    flex-wrap: wrap;
+                 display: flex;
+                 flex-wrap: wrap;
                  text-transform: uppercase;
                  margin: 20px 0;
                  padding: 10px 20px;
@@ -187,10 +187,12 @@
  /* Color = background: rgb(11, 92, 88);
 background: linear-gradient(137deg, rgba(11, 92, 88, 1) 0%, rgba(1, 11, 44, 1) 45%); */
 
+/* -------------------------------------------------------------------------- */
 
-
-
-
+.NavItemDiv a.active {
+    border-bottom: 2px solid #00FFFF;
+    transition: border
+}
  /* -------------------------------------------------------------------------- */
 
  .container-2 {

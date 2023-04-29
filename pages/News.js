@@ -10,7 +10,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import NewsApp from '../components/NewsApp';
-import Footer from '../components/Footer';
+import Footer from "../components/Layout/Footer";
 
 function News() {
   useEffect(() => {

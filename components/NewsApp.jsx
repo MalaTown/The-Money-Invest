@@ -7,7 +7,7 @@
 /* eslint-disable react/sort-comp */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Loading from './Loader';
+import Loading from "./Layout/Loader";
 import NewsItem from './NewsItems';
 
 export class NewsApp extends Component {

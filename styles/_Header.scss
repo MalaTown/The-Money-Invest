@@ -39,11 +39,11 @@
 
 
 @media (max-width: 768px) {
-
+/* Phone-Screen */
     .headerBox {
         display: flex;
         /* flex-direction: column; */
-        padding: 8% 10% 8% 10%;
+        padding: 2% 10% 2% 10%;
     }
 
     .PhoneHead {
@@ -68,7 +68,7 @@
     }
 
     .logo {
-        width: 18%;
+        width: 40%;
     }
 
 }

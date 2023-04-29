@@ -156,7 +156,16 @@ top-15 {
 
 .kilimanjaro_social_links>li {
     display: inline-block;
+    margin-right: 10px;
 }
+
+.kilimanjaro_social_links a:hover{
+    background-color: #000000;
+    color: white;
+    border: 1px solid #fff;
+    box-shadow: 0px 2px 2px #fff;
+}
+
 
 p,
 ul li,
@@ -168,7 +177,8 @@ ol li {
     border: 1px solid #333;
     border-radius: 6px;
     color: #888;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 13px;
     margin-bottom: 3px;
     padding: 7px 12px;

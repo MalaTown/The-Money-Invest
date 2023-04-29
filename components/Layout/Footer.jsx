@@ -2,14 +2,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//   solid,
-//   regular,
-//   brands,
-//   icon,
-// } from '@fortawesome/fontawesome-svg-core/import.macro';
-// import { faFacebookF } from '@fortawesome/free-solid-svg-icons';
+import {
+  BsFacebook,
+  BsTwitter,
+  BsLinkedin,
+  BsYoutube,
+  BsInstagram
+} from "react-icons/bs";
 
 function Footer() {
   return (
@@ -38,31 +37,29 @@ function Footer() {
                   <ul className="kilimanjaro_social_links">
                     <li>
                       <a href="#">
-                        <i className="fa fa-facebook" aria-hidden="true" />{' '}
+                        <BsFacebook style={{ marginRight: "5px" }} />
                         Facebook
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fa fa-twitter" aria-hidden="true" />{' '}
+                        <BsTwitter style={{ marginRight: "5px" }} />
                         Twitter
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fa fa-pinterest" aria-hidden="true" />{' '}
-                        LinkedIn
+                        <BsLinkedin style={{ marginRight: "5px" }} /> LinkedIn
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fa fa-youtube" aria-hidden="true" />{' '}
-                        YouTube
+                        <BsYoutube style={{ marginRight: "5px" }} /> YouTube
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fa fa-linkedin" aria-hidden="true" />{' '}
+                        <BsInstagram style={{ marginRight: "5px" }} />{" "}
                         Instagram
                       </a>
                     </li>
@@ -71,48 +68,33 @@ function Footer() {
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 col-lg-3">
-
                   <div className="kilimanjaro_part m-top-15">
                     <h5>Important Links</h5>
                     <ul className="kilimanjaro_links">
                       <li>
                         <a href="#">
-                          <i
-                            className="fa fa-angle-right"
-                            aria-hidden="true"
-                          />
+                          <i className="fa fa-angle-right" aria-hidden="true" />
                           Terms & Conditions
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i
-                            className="fa fa-angle-right"
-                            aria-hidden="true"
-                          />
+                          <i className="fa fa-angle-right" aria-hidden="true" />
                           About Licences
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i
-                            className="fa fa-angle-right"
-                            aria-hidden="true"
-                          />
+                          <i className="fa fa-angle-right" aria-hidden="true" />
                           Help & Support
                         </a>
                       </li>
-                      {/* <li><a href="#"><i className="fa fa-angle-right" aria-hidden="true"></i>Careers</a></li> */}
                       <li>
                         <a href="#">
-                          <i
-                            className="fa fa-angle-right"
-                            aria-hidden="true"
-                          />
+                          <i className="fa fa-angle-right" aria-hidden="true" />
                           Privacy Policy
                         </a>
                       </li>
-                      {/* <li><a href="#"><i className="fa fa-angle-right" aria-hidden="true"></i>Community & Forum</a></li> */}
                     </ul>
                   </div>
                 </div>
@@ -143,9 +125,10 @@ function Footer() {
             <div className="row">
               <div className="col-12">
                 <p>
-                  All Rights Reserved by{' '}
+                  All Rights Reserved by{" "}
                   <a href="#">
-                    The Money Invest<i className="fa fa-love" />
+                    The Money Invest
+                    <i className="fa fa-love" />
                   </a>
                 </p>
               </div>

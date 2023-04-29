@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Footer from '../components/Footer';
+import Footer from '../components/Layout/Footer';
 
 export default function AboutUs() {
   return (
