@@ -77,11 +77,11 @@ function Quiz() {
     )}%)`;
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Submit the quiz results and name to the server here
-    console.log(name, answers);
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // Submit the quiz results and name to the server here
+  //   console.log(name, answers);
+  // };
 
   const handleRestart = () => {
     setStarted(false);
@@ -94,28 +94,46 @@ function Quiz() {
 
   if (!started) {
     return (
-      <div>
-        <form>
-          <label>
-            Enter your name:
+      <div className=" quizpage ">
+        <form className=" bg-gray-100 text-black my-4 p-8 border-double border-2  border-black shadow-md rounded-2xl shadow-slate-400 width-30 ">
+          <label
+            for="name"
+            className="my-4 border-black  border-b-2 font-cursive"
+          >
+            <p className="border-black border-solid border-b-2 font-semibold">
+              Enter your name:
+            </p>
             <input
               type="text"
+              id="name"
               value={name}
+              placeholder="Your Name Here"
               onChange={(event) => setName(event.target.value)}
+              required
+              className="text-black my-4"
             />
           </label>
-          <br />
-          <br />
-          <label>
+          <label className="my-2 pb-4 border-black  border-b-2 font-cursive ">
             Select difficulty:
-            <select value={difficulty} onChange={handleDifficultyChange}>
+            <select
+              value={difficulty}
+              onChange={handleDifficultyChange}
+              style={{ color: "black" }}
+            >
               <option value="Easy">Easy</option>
               <option value="Medium">Medium</option>
               <option value="Hard">Hard</option>
             </select>
           </label>
         </form>
-        <button onClick={handleStartClick}>Start</button>
+        <button
+          onClick={handleStartClick}
+          id="start-btn"
+          class="btn"
+          className="bg-pink-600 mt-2 p-2 rounded-full border-black border-2 shadow-md shadow-black hover:bg-pink-500 hover:text-white hover:shadow-pink-800"
+        >
+          Start
+        </button>
       </div>
     );
   }
@@ -128,7 +146,7 @@ function Quiz() {
   return (
     <div>
       {!name ? (
-        <div>
+        <div className="container quizpage">
           <form>
             <label>
               Please enter your name:
@@ -156,49 +174,62 @@ function Quiz() {
           <button onClick={handleStartClick}>Start</button>
         </div>
       ) : !quizQuestions ? null : (
-        <div>
-          <h2>Question {currentQuestionIndex + 1}</h2>
-          <h3>{quizQuestions[currentQuestionIndex].questionTitle}</h3>
-          <ul>
-            {quizQuestions[currentQuestionIndex].options.map(
-              (option, index) => {
-                const isCorrect =
-                  quizQuestions[currentQuestionIndex].correctAnswer === option;
-                const isSelected = selectedOption === option;
-                let optionClasses = "option-button";
-                if (isSelected) {
-                  optionClasses += isCorrect ? " correct" : " incorrect";
-                } else if (showAnswer && isCorrect) {
-                  optionClasses += " correct";
+        <div className="flex flex-col items-center">
+          <div className="container w-1/2 flex-col rounded-xl bg-gray-500 p-4 my-2">
+            <h2 className="text-lg font-semibold">
+              Question {currentQuestionIndex + 1}
+              {" : "}
+              {quizQuestions[currentQuestionIndex].questionTitle}
+            </h2>
+            <ul>
+              {quizQuestions[currentQuestionIndex].options.map(
+                (option, index) => {
+                  const isCorrect =
+                    quizQuestions[currentQuestionIndex].correctAnswer ===
+                    option;
+                  const isSelected = selectedOption === option;
+                  let optionClasses = "option-button";
+                  if (isSelected) {
+                    optionClasses += isCorrect ? " correct" : " incorrect";
+                  } else if (showAnswer && isCorrect) {
+                    optionClasses += " correct";
+                  }
+                  return (
+                    <li
+                      key={index}
+                      className={optionClasses}
+                      onClick={() => {
+                        if (!selectedOption) {
+                          handleOptionSelect(option);
+                        }
+                      }}
+                    >
+                       {option}
+                      {showAnswer && isCorrect && (
+                        <FontAwesomeIcon icon={faCheck} />
+                      )}
+                    </li>
+                  );
                 }
-                return (
-                  <li
-                    key={index}
-                    className={optionClasses}
-                    onClick={() => {
-                      if (!selectedOption) {
-                        handleOptionSelect(option);
-                      }
-                    }}
-                  >
-                    {option}
-                    {showAnswer && isCorrect && (
-                      <FontAwesomeIcon icon={faCheck} />
-                    )}
-                  </li>
-                );
-              }
-            )}
-          </ul>
+              )}
+            </ul>
+          </div>
           {currentQuestionIndex < quizQuestions.length - 1 ? (
             <button onClick={handleNextQuestion}>Next Question</button>
           ) : (
-            <div>
-              <p>
-                Congratulations {name}! You have completed the quiz.{" "}
+            <div className=" w-1/2 my-4 py-4 border-black border-2 flex flex-col items-center rounded-xl">
+              <p className="font-bold mb-2 px-2 rounded-full border-b-2 border-dashed border-black text-center">
+                Hey {name} ! You have completed the quiz.{" "}
+              </p>
+              <p className="font-bold mb-2 px-2 rounded-full border-b-2 border-dashed border-black text-center">
                 {calculateResult()}
               </p>
-              <button onClick={handleRestart}>Restart Quiz</button>
+              <button
+                onClick={handleRestart}
+                className="bg-pink-600 mt-2 p-2 rounded-full border-black border-2 shadow-md shadow-black hover:bg-pink-500 hover:text-white hover:shadow-pink-800 transition-transform hover:border-y-transparent "
+              >
+                Restart Quiz
+              </button>
             </div>
           )}
         </div>

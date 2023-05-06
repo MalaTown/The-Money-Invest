@@ -1,3 +1,25 @@
+.quizpage {
+    background-image: url('../public/images/Quiz-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding: 7rem 0;
+    border: white 2px;
+    font-family: cursive;
+    font-size: 15pt;
+}
+.font-cursive{
+        font-family: cursive;
+}
+.width-30{
+    width: 30%;
+}
+
+
 .option-button {
     background-color: #ffffff;
     border: 1px solid #cccccc;
@@ -7,6 +29,11 @@
     margin: 5px;
     padding: 10px;
     transition: all 0.3s ease-in-out;
+
+     &:hover{
+        background-color: skyblue;
+        border: solid 1px black
+    }
 }
 
 .selected {
@@ -19,7 +46,7 @@
     color: #ffffff;
 }
 
-.incorrect{
+.incorrect {
     background-color: #cc0000;
     color: #ffffff;
 }

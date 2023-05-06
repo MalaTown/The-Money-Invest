@@ -1,10 +1,7 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
-import Image from 'next/image';
-import moment from 'moment';
-import Link from 'next/link';
+/* eslint-disable */
+import React from "react";
+import Link from "next/link";
 
-import { grpahCMSImageLoader } from '../util';
 
 function NewsPostCard({ post }) {
   return (
@@ -44,7 +41,8 @@ function NewsPostCard({ post }) {
             className="h-20 w-20 object-cover  shadow-lg "
           />
           <div className=" px-4">
-            <h1 className="text-base  "><Link href={`/newspost/${post.slug}`}>{post.title}</Link>
+            <h1 className="text-base  ">
+              <Link href={`/newspost/${post.slug}`}>{post.title}</Link>
             </h1>
             <h1 className="text-xs bold ">{post.excerpt}</h1>
           </div>

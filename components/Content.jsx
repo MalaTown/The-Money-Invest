@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable */
-import React from 'react';
+import React from "react";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {
 //   solid,
@@ -10,12 +10,12 @@ import React from 'react';
 //   brands,
 //   icon,
 // } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
-import Image from 'next/image';
-import Polling from './PollingSection';
-import StockdioChart from './Stockchart';
+import Image from "next/image";
+import Polling from "./PollingSection";
+import StockdioChart from "./Stockchart";
 // import NewsPostCard from './NewsPostCard';
 
-function Content({ newsposts }) {
+function Content() {
   return (
     <div className="MainDataDiv">
       <div
@@ -35,71 +35,36 @@ function Content({ newsposts }) {
           The Money Invest
         </h1>
 
-        <div style={{ display: "flex", fontWeight: "700" }}>
-          {/* <FontAwesomeIcon icon={solid("user")} />
-           */}
-          <div>
+        <div className="flex">
+
+          <a href="https://zerodha.com/open-account?c=AL3820">
             <img
               // className="w-14 h-14 logoimage border-4 border-blue-900 rounded-full p-1"
               src="/images/Stock_top_icon.png"
               height="40"
               width="130"
               alt="StockAccount"
-              href="https://zerodha.com/open-account?c=AL3820"
               className="topicons"
             />
-            {/* <a
-              className="Headlink md:text-sm bg-blue-300"
-              style={{
-                textDecoration: "none",
-              }}
-              href="https://zerodha.com/open-account?c=AL3820"
-            >
-              Open Demat Account{" "}
-            </a> */}
-          </div>
-          <div>
+          </a>
+          <a href="./Ebook">
             <img
-              // className="w-14 h-14 logoimage border-4 border-blue-900 rounded-full p-1"
               src="/images/Ebook_top_icon.png"
               height="40"
               width="130"
               alt="EBooks"
-              href="./Ebook"
               className="topicons"
             />
-
-            {/* <a
-              className="Headlink md:text-sm bg-blue-300"
-              style={{
-                textDecoration: "none",
-              }}
-              href="./Ebook"
-            >
-              E-Book{" "}
-            </a> */}
-          </div>
-          <div>
+          </a>
+          <a href="">
             <img
-              // className="w-14 h-14  logoimage border-4 border-blue-900 rounded-full p-1 "
-              src="/images/Stock_top_icon.png"
+              src="/images/Crypto_top_icon.png"
               width="130"
               height="40"
               alt="Crypto"
-              href=""
               className="topicons"
             />
-
-            {/* <a
-              className="Headlink md:text-sm bg-blue-300"
-              style={{
-                textDecoration: "none",
-              }}
-              href=""
-            >
-              Open Crypto Account
-            </a> */}
-          </div>
+          </a>
         </div>
       </div>
       <div
