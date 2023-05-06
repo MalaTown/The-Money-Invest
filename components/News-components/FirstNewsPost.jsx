@@ -1,31 +1,31 @@
-// import React from 'react';
-// import Link from 'next/link';
-// import { getFirstNewsPosts } from '../services';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { getFirstNewsPosts } from '../../services';
 
 function FirstNewsPost() {
-  // const [loading, setLoading] = useState(true);
-  // const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState([]);
 
-  // useEffect(() => {
-  //   async function fetchPosts() {
-  //     const postsData = await getFirstNewsPosts();
-  //     setPosts(postsData);
-  //     setLoading(false);
-  //   }
-  //   fetchPosts();
-  // }, []);
+  useEffect(() => {
+    async function fetchPosts() {
+      const postsData = await getFirstNewsPosts();
+      setPosts(postsData);
+      setLoading(false);
+    }
+    fetchPosts();
+  }, []);
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  // if (!posts || !posts.length) {
-  //   return <div>No news posts found</div>;
-  // }
+  if (!posts || !posts.length) {
+    return <div>No news posts found</div>;
+  }
 
   return (
     <div>
-      {/* {posts.map((post) => (
+      {posts.map((post) => (
         <div className="flex my-3 h-20 shadow-lg bg-slate-600" key={post.slug}>
           {post.featuredImage && post.featuredImage.url && (
             <img
@@ -41,7 +41,7 @@ function FirstNewsPost() {
             <h1 className="text-xs font-bold">{post.excerpt}</h1>
           </div>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 }

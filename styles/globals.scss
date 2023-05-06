@@ -10,7 +10,6 @@
 @import "./_PollingSection.scss";
 @import "./_Portfolio.scss";
 @import "./_QuizPage.scss";
-@import "./_Navbar2.scss";
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +21,8 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    background: #cff2ff;
     
     &:before {
         content: '';
@@ -33,7 +33,6 @@ body {
         // background: #D3D3D3; */
         /* background-image: url("../public/bg.jpg"); */
         /* background: #f2f3eb; */
-            background: #cff2ff;
         position: fixed;
         left: 0;
         top: 0;

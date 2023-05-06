@@ -5,7 +5,7 @@ import Footer from "../components/Layout/Footer";
 
 function Ebook() {
   return (
-    <div className="EbookContainer">
+    <div className="EBookBox">
       <title>Ebook</title>
       <div
         className="EbookHead"
@@ -19,7 +19,7 @@ function Ebook() {
         />
       </div>
 
-      <h1 className="HeadText">E-Books</h1>
+      <h1 className="HeadText my-8 text-2xl flex justify-center ">E-Books</h1>
       {/* <div
         className="EbookSection"
         style={{ backgroundImage: 'url(/images/background.jpg)', opacity: 0.2}}
@@ -29,8 +29,8 @@ function Ebook() {
       <div className="EbookSection">
         <div className="lg:flex">
           <div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TheDisciplinedtrader.jpg"
@@ -38,12 +38,12 @@ function Ebook() {
                   height="200"
                   alt="Ebook Header"
                 />
-                <h1 className="EbookTitle">The Disciplined trader</h1>
-                <button className="btn btn-success">Download </button>
+                <h1 className="EbookTitle">The Disciplined trader 1</h1>
               </div>
+              <button className="btn btn-success Downloadbtn">Download </button>
             </div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TheIntelligentInvestor.jpg"
@@ -51,12 +51,12 @@ function Ebook() {
                   height="200"
                   alt="Ebook Header"
                 />
+                <h1 className="EbookTitle">The Intelligent Investor 2</h1>
               </div>
-              <h1 className="EbookTitle">The Intelligent Investor</h1>
               <button className="btn btn-success Downloadbtn">Download</button>
             </div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TradingInTheZone.jpg"
@@ -64,16 +64,14 @@ function Ebook() {
                   height="200"
                   alt="Ebook Header"
                 />
-                <h1 className="EbookTitle">Trading In The Zone</h1>
-                <button className="btn btn-success Downloadbtn">
-                  Download
-                </button>
+                <h1 className="EbookTitle">Trading In The Zone3</h1>
               </div>
+              <button className="btn btn-success Downloadbtn">Download</button>
             </div>
           </div>
           <div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TheDisciplinedtrader.jpg"
@@ -81,12 +79,12 @@ function Ebook() {
                   height="200"
                   alt="Ebook Header"
                 />
-                <h1 className="EbookTitle">The Disciplined trader</h1>
-                <button className="btn btn-success">Download </button>
+                <h1 className="EbookTitle">The Disciplined trader4 </h1>
               </div>
+              <button className="btn btn-success Downloadbtn">Download </button>
             </div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TheIntelligentInvestor.jpg"
@@ -94,12 +92,12 @@ function Ebook() {
                   height="200"
                   alt="Ebook Header"
                 />
+                <h1 className="EbookTitle">The Intelligent Investor</h1>
               </div>
-              <h1 className="EbookTitle">The Intelligent Investor</h1>
               <button className="btn btn-success Downloadbtn">Download</button>
             </div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TradingInTheZone.jpg"
@@ -108,15 +106,13 @@ function Ebook() {
                   alt="Ebook Header"
                 />
                 <h1 className="EbookTitle">Trading In The Zone</h1>
-                <button className="btn btn-success Downloadbtn">
-                  Download
-                </button>
               </div>
+              <button className="btn btn-success Downloadbtn">Download</button>
             </div>
           </div>
           <div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TheDisciplinedtrader.jpg"
@@ -124,12 +120,12 @@ function Ebook() {
                   height="200"
                   alt="Ebook Header"
                 />
-                <h1 className="EbookTitle">The Disciplined trader</h1>
-                <button className="btn btn-success">Download </button>
+                <h1 className="EbookTitle">The Disciplined trader 6</h1>
               </div>
+              <button className="btn btn-success Downloadbtn">Download </button>
             </div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TheIntelligentInvestor.jpg"
@@ -137,12 +133,12 @@ function Ebook() {
                   height="200"
                   alt="Ebook Header"
                 />
+                <h1 className="EbookTitle">The Intelligent Investor</h1>
               </div>
-              <h1 className="EbookTitle">The Intelligent Investor</h1>
               <button className="btn btn-success Downloadbtn">Download</button>
             </div>
-            <div className="BookContainer photo">
-              <div className="">
+            <div className="BookContainer">
+              <div className="BookBox photo">
                 <Image
                   className="BookImage"
                   src="/images/TradingInTheZone.jpg"
@@ -151,10 +147,8 @@ function Ebook() {
                   alt="Ebook Header"
                 />
                 <h1 className="EbookTitle">Trading In The Zone</h1>
-                <button className="btn btn-success Downloadbtn">
-                  Download
-                </button>
               </div>
+              <button className="btn btn-success Downloadbtn">Download</button>
             </div>
           </div>
         </div>

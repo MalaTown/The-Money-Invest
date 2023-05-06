@@ -10,28 +10,28 @@ import {
 
 function Footer() {
   return (
-    <div className="FooterContainer">
+    <div className="FooterContainer mt-5">
       <footer className="kilimanjaro_area">
         {/* <!-- Top Footer Area Start --> */}
-        <div className="foo_top_header_one section_padding_100_70">
+        <div className="foo_top_header_one section_padding_100_70 border-solid border-white ">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-md-6 col-lg-3">
-                <div className="kilimanjaro_part">
-                  <h5>About Us</h5>
+              <div className="flex col-12 col-md-6 col-lg-3 gap-10">
+                <div className="kilimanjaro_part w-1/2">
+                  <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
+                    About Us
+                  </h5>
                   <p>
-                    It includes rich features & contents. It's designed &
-                    developed based on One Page/ Multi-page Layout,blog
-                    themes,world press themes and blogspot. You can use any
-                    layout from any demo anywhere.
-                  </p>
-                  <p>
-                    Our company is completely creative, clean & 100% responsive
-                    website. Put your business into next level with us.
+                    We provide information regarding the Stock market and the
+                    Crypto as well. Here you can get the Top, Global and
+                    Trending News on a click.
+                    Explore For more...
                   </p>
                 </div>
-                <div className="kilimanjaro_part m-top-15">
-                  <h5>Social Links</h5>
+                <div className="kilimanjaro_part w-1/2">
+                  <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
+                    Social Links
+                  </h5>
                   <ul className="kilimanjaro_social_links">
                     <li>
                       <a href="#">
@@ -63,10 +63,12 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-12 col-md-6 col-lg-3">
+              <div className="row flex gap-10">
+                <div className="col-12 col-md-6 col-lg-3 w-1/2">
                   <div className="kilimanjaro_part m-top-15">
-                    <h5>Important Links</h5>
+                    <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
+                      Important Links
+                    </h5>
                     <ul className="kilimanjaro_links">
                       <li>
                         <a href="#">
@@ -74,12 +76,12 @@ function Footer() {
                           Terms & Conditions
                         </a>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="#">
                           <i className="fa fa-angle-right" aria-hidden="true" />
                           About Licences
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href="#">
                           <i className="fa fa-angle-right" aria-hidden="true" />
@@ -96,9 +98,11 @@ function Footer() {
                   </div>
                 </div>
 
-                <div className="col-12 col-md-6 col-lg-3">
+                <div className="col-12 col-md-6 col-lg-3 w-1/2">
                   <div className="kilimanjaro_part">
-                    <h5 className="text-center ">Quick Contact</h5>
+                    <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
+                      Quick Contact
+                    </h5>
                     <div className="lg:flex lg:justify-around ">
                       <div className="kilimanjaro_single_contact_info">
                         <h5>Phone:</h5>
@@ -121,12 +125,8 @@ function Footer() {
           <div className="container justify-center">
             <div className="row">
               <div className="col-12">
-                <p>
-                  All Rights Reserved by{" "}
-                  <a href="#">
-                    The Money Invest
-                    <i className="fa fa-love" />
-                  </a>
+                <p href="#" className="font-bold font-mono text-base">
+                  All Rights Reserved by "The Money Invest"
                 </p>
               </div>
             </div>
