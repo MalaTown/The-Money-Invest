@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useEffect } from "react";
-import NewsApp from "../components/News-components/NewsApp";
+// import NewsApp from "../components/News-components/NewsApp";
 import Footer from "../components/Layout/Footer";
 
 function NewsApp() {

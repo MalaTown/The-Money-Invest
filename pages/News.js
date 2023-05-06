@@ -1,7 +1,13 @@
 /* eslint-disable */
 
 import React from "react";
-import { PostCard, Categories, PostWidget, BlogHeader, NewsApi } from "../components";
+import {
+  PostCard,
+  Categories,
+  PostWidget,
+  BlogHeader,
+  NewsApi,
+} from "../components";
 import { getNewsPosts } from "../services";
 import NewsPostCard from "../components/News-components/NewsPostCard";
 import { useQuery, gql } from "@apollo/client";
@@ -55,9 +61,10 @@ export default function News({ newsposts }) {
     >
       {/* -------------------------------Top Section start------------------------------  */}
 
+      <h1 className="border-black border-y-2 my-4   ">Top News</h1>
       <div style={{ width: "1250px" }} className="flex items-center ">
         <div
-          className="flex flex-col justify-end items-start"
+          className="flex flex-col justify-end items-start p-1 border-2  border-black "
           style={{
             height: "400px",
             width: "313px",
@@ -77,7 +84,7 @@ export default function News({ newsposts }) {
         </div>
 
         <div
-          className="flex flex-col justify-end items-start "
+          className="flex flex-col justify-end items-start  p-1 border-2  border-black  "
           style={{
             height: "400px",
             width: "624px",
@@ -98,7 +105,7 @@ export default function News({ newsposts }) {
 
         <div>
           <div
-            className="flex flex-col justify-end items-start"
+            className="flex flex-col justify-end items-start  p-1 border-2  border-black "
             style={{
               height: "195px",
               width: "313px",
@@ -117,7 +124,7 @@ export default function News({ newsposts }) {
           </div>
 
           <div
-            className="bg-contain bg-center bg-no-repeat NewsBox4 flex flex-col justify-end items-start"
+            className="bg-contain bg-center bg-no-repeat NewsBox4 flex flex-col justify-end items-start  p-1 border-2  border-black "
             style={{
               height: "195px",
               width: "313px",
@@ -147,7 +154,7 @@ export default function News({ newsposts }) {
           width: "1250px",
           //   height: "450px",
         }}
-        className="flex items-center"
+        className="flex items-center border-solid border-b-2 border-black mb-4 pb-4"
       >
         <div className="container flex mt-4 ">
           <div className="mr-4" style={{ width: "24.6%" }}>
@@ -228,7 +235,7 @@ export default function News({ newsposts }) {
 
       {/*  --------------------------- Third Section Start --------------------------  */}
 
-      <div
+      {/* <div
         style={{
           width: "1250px",
           height: "420px",
@@ -237,7 +244,7 @@ export default function News({ newsposts }) {
       >
         <h1 className="border-black border-y-2 mb-2 h-min  ">Global News</h1>
         <NewsApp/>
-      </div>
+      </div> */}
 
       {/* --------------------------- Third Section End -------------------------- */}
     </div>
