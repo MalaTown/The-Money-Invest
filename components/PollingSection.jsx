@@ -38,7 +38,6 @@ export default function PollingSection() {
               className="w-10 h-10 max-md:w-6 max-md:h-6 rounded-full PositiveButton pollbuttons"
               style={{
                 backgroundImage: "url('./images/Positive_icon.jpg')",
-                width: '100%',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
@@ -66,7 +65,6 @@ export default function PollingSection() {
               className="w-10 h-10 max-md:w-6 max-md:h-6 rounded-full NegativeButton pollbuttons"
               style={{
                 backgroundImage: "url('./images/Negative_icon.jpg')",
-                width: '100%',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
