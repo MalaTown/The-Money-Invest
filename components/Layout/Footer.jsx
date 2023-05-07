@@ -65,7 +65,7 @@ function Footer() {
               </div>
               <div className="row flex gap-10">
                 <div className="col-12 col-md-6 col-lg-3 w-1/2">
-                  <div className="kilimanjaro_part m-top-15">
+                  <div className="kilimanjaro_part ">
                     <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
                       Important Links
                     </h5>

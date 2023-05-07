@@ -73,7 +73,7 @@ function Content() {
       >
         <div className="row-span-3">
           <div
-            className="p-7"
+            className="p-7 max-md:p-4"
             style={{
               backgroundColor: "#0f4772",
               boxShadow: "black 0px 2px 10px",
@@ -91,7 +91,7 @@ function Content() {
                 // opacity: "0.7"
               }}
             >
-              <h1 className="text-2xl font-serif font-semibold">
+              <h1 className="text-2xl font-serif font-semibold max-md:text-base">
                 Market Sentiments
               </h1>
               <Polling />
@@ -110,7 +110,7 @@ function Content() {
           </div>
         </div>
         <div
-          className="p-7 my-4 lg:ml-20 md:m-0 sm:m-0"
+          className="NewsContainer p-7 my-4 lg:ml-20 md:m-0 sm:m-0 md:p-6 md:p-6 "
           style={{
             backgroundColor: "#0f4772",
             boxShadow: "black 0px 2px 10px",
@@ -124,7 +124,7 @@ function Content() {
           }}
         >
           <div
-            className="NewsBlock lg:w-72 md:w-full"
+            className="NewsBlock lg:w-72 md:w-full md:p-3"
             style={{
               // backgroundColor: "white",
               border: "1px solid",

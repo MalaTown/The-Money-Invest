@@ -4,9 +4,14 @@
     border: solid black;
     padding: 25px;
     font-size: 12pt;
-    width: inherit;
-        
+    width: inherit; 
 }
+@media (max-width:768px) {
+    .FooterContainer{
+        padding: 15px;
+    }
+}
+
 
 .kilimanjaro_area {
     position: relative;
@@ -21,6 +26,10 @@
     background-color: #15151e;
     color: #fff;
     padding: 0 4rem;
+
+    @media (max-width:768px) {
+        padding: 5px;
+    }
 }
 
 .section_padding_100_70 {
