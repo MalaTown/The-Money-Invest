@@ -5,7 +5,6 @@
     color: #0f4772;
     font-size: 49px;
     font-weight: 600
-
 }
 
 .topicons {
@@ -42,7 +41,18 @@ h1 {
         font-size: 2rem;
     }
 
+    .NewsContainer {
+        height: 400px;
+        padding: 42px 24px;
+    }
 
+    .NewsBlock {
+    border: 1px solid;
+        height: 333px;
+        padding: 8px;
+        position: relative;
+        margin-right: 24px;
+    }
 }
 
 #page-wrap {
