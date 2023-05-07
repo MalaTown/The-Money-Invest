@@ -9,12 +9,19 @@ import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <div className="HeaderContainer">
+    <div
+      className="HeaderContainer fixed">
       <div>
         <Sidebar pageWrapId="page-wrap" outerContainerId="outer-container" />
       </div>
       <Link href="/" style={{ textDecoration: "none" }}>
-        <div className="headerBox">
+        <div className="headerBox"       style={{
+        backgroundImage: "url('../public/images/background/bg1.jpg')",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        zIndex: "2"
+      }}>
           <Image
             className="logo"
             src="/images/TMI-Logo.png"

@@ -128,10 +128,10 @@ function Content() {
             style={{
               // backgroundColor: "white",
               border: "1px solid",
-              height: "396px",
+              height: "410px",
               padding: "20px",
-              position: "relative",
-              top: "10%",
+              // position: "relative",
+              marginTop: "10%",
               marginRight: "32px",
             }}
           >

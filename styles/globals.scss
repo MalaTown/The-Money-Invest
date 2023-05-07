@@ -19,10 +19,11 @@
 
 html,
 body {
+    margin-top: 80px;
     padding: 0;
     margin: 0;
     /* font-family: 'Montserrat', sans-serif; */
-    background: #cff2ff;
+    /* background: #cff2ff; */
     
     &:before {
         content: '';
@@ -31,7 +32,7 @@ body {
         height: 100vh;
         /* //background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
         // background: #D3D3D3; */
-        /* background-image: url("../public/bg.jpg"); */
+        background-image: url("../public/images/background/bg1.jpg");
         /* background: #f2f3eb; */
         position: fixed;
         left: 0;

@@ -1,23 +1,25 @@
 /* eslint-disable */
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Header from "../components/Layout/Header";
 import Footer from "../components/Layout/Footer";
 
-if (typeof document !== "undefined") {
-  const scrollButtonButton = document.getElementById("scrollButton");
-  scrollButtonButton.addEventListener("click", () => {
-    const center = window.innerHeight / 1.1;
-    window.scrollTo({
-      top: center,
-      behavior: "smooth",
-    });
-  });
-}
-
 function Portfolio() {
+  useEffect(() => {
+    const scrollButtonButton = document.getElementById("scrollButton");
+    if (scrollButtonButton) {
+      scrollButtonButton.addEventListener("click", () => {
+        const center = window.innerHeight / 1.1;
+        window.scrollTo({
+          top: center,
+          behavior: "smooth",
+        });
+      });
+    }
+  }, []);
+
   return (
-    <div className="PFContainer" style={{ background: "#F2F3EB" }}>
+    <div className="PFContainer">
       <title>Portfolio</title>
       <div
         className="PortfolioHead"
@@ -25,7 +27,8 @@ function Portfolio() {
           position: "relative",
           width: "100%",
           height: "300px",
-          marginBottom: "5%",
+          margin: "3% 0",
+          border: "solid 2px black",
         }}
       >
         <div className="image-container ">
@@ -100,62 +103,6 @@ function Portfolio() {
             <p className="BoxTitle">Title of image 4</p>
           </div>
         </div>
-        {/* <div class="box glow">
-            <img
-              src="/images/image5.png"
-              alt="Image 5"
-              width="100"
-              height="100"
-            ></img>
-            <p>Title of image 5</p>
-          </div>
-        </div>
-        <div class="viewport">
-          <div class="box glow">
-            <img
-              src="/images/image6.png"
-              alt="Image 6"
-              width="100"
-              height="100"
-            ></img>
-            <p>Title of image 6</p>
-          </div>
-          <div class="box glow">
-            <img
-              src="/images/image7.png"
-              alt="Image 7"
-              width="100"
-              height="100"
-            ></img>
-            <p>Title of image 7</p>
-          </div>
-          <div class="box glow">
-            <img
-              src="/images/image8.png"
-              alt="Image 8"
-              width="100"
-              height="100"
-            ></img>
-            <p>Title of image 8</p>
-          </div>
-          <div class="box glow">
-            <img
-              src="/images/image9.png"
-              alt="Image 9"
-              width="100"
-              height="100"
-            ></img>
-            <p>Title of image 9</p>
-          </div>
-          <div class="box glow glow">
-            <img
-              src="/images/image10.png"
-              alt="Image 10"
-              width="100"
-              height="100"
-            ></img>
-            <p>Title of image 10</p>
-          </div> */}
       </div>
 
       <Footer />
