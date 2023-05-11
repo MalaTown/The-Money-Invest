@@ -1,5 +1,8 @@
-.NewsContainer {}
-
+@media (min-width:768px) {
+    .NewsContainer {
+    height: 500px;
+}
+}
 body {}
 
 .NewsDiv {

@@ -61,6 +61,16 @@ h1 {
     }
 }
 
+@media (min-width:768px) {
+    .NewsBlock {
+        border: 1px solid;
+        height: 410px;
+        padding: 20px;
+        margin-top: 10%;
+        margin-right: 32px;
+    }
+}
+
 #page-wrap {
     margin-top: -30px;
 }

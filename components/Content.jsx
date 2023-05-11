@@ -116,24 +116,23 @@ function Content() {
             boxShadow: "black 0px 2px 10px",
             borderRadius: "10px",
             backgroundImage: "url('./images/QuickNewsBG.png')",
-            // width: "400px",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            height: "500px",
+
           }}
         >
           <div
             className="NewsBlock lg:w-72 md:w-full md:p-3"
-            style={{
-              // backgroundColor: "white",
-              border: "1px solid",
-              height: "410px",
-              padding: "20px",
-              // position: "relative",
-              marginTop: "10%",
-              marginRight: "32px",
-            }}
+            // style={{
+            //   // backgroundColor: "white",
+            //   border: "1px solid",
+            //   height: "410px",
+            //   padding: "20px",
+            //   // position: "relative",
+            //   marginTop: "10%",
+            //   marginRight: "32px",
+            // }}
           >
             <h1>Latest Posts</h1>
             {/* {newsposts.map((post, index) => (
