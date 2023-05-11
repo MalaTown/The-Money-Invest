@@ -24,8 +24,7 @@ function Footer() {
                   <p>
                     We provide information regarding the Stock market and the
                     Crypto as well. Here you can get the Top, Global and
-                    Trending News on a click.
-                    Explore For more...
+                    Trending News on a click. Explore For more...
                   </p>
                 </div>
                 <div className="kilimanjaro_part w-1/2">
@@ -34,29 +33,29 @@ function Footer() {
                   </h5>
                   <ul className="kilimanjaro_social_links">
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/Themoneyinvest">
                         <BsFacebook style={{ marginRight: "5px" }} />
                         Facebook
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://twitter.com/moneyinvestcom?t=Xw0Unm-kHX-wq8MYmkV4ug&s=08">
                         <BsTwitter style={{ marginRight: "5px" }} />
                         Twitter
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.linkedin.com/in/the-money-invest-958683270/">
                         <BsLinkedin style={{ marginRight: "5px" }} /> LinkedIn
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://youtube.com/@themoneyinvest">
                         <BsYoutube style={{ marginRight: "5px" }} /> YouTube
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/themoneyinvestcom/">
                         <BsInstagram style={{ marginRight: "5px" }} /> Instagram
                       </a>
                     </li>

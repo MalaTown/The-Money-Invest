@@ -7,17 +7,17 @@ function Ebook() {
   return (
     <div className="EBookBox">
       <title>Ebook</title>
-      <div
+      {/* <div
         className="EbookHead"
-        style={{ position: "relative", height: "200px" }}
+        style={{ position: "", height: "200px" }}
       >
         <Image
-          className="HeadImage object-contain"
+          className=""
           src="/images/Ebookhead.png"
           fill="true"
           alt="Ebook Header"
         />
-      </div>
+      </div> */}
 
       <h1 className="HeadText my-8 text-2xl flex justify-center ">E-Books</h1>
       {/* <div
