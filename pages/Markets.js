@@ -1,6 +1,7 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { TickerTape, MarketOverview, SingleTicker } from 'react-ts-tradingview-widgets';
+import TradingViewWidget from '../components/Market-components/TradingViewWidget';
 
 function Markets() {
   return (
@@ -155,6 +156,7 @@ function Markets() {
             },
           ]}
         />
+
         {/* <TradingViewWidget
           symbol="AAPL"
           interval="D"
@@ -172,25 +174,9 @@ function Markets() {
           ></script>
         </TradingViewWidget> */}
       </div>
-      ;
-      {/* <div>
-        <TickerTape colorTheme="dark"></TickerTape>
+      <div style={{width: "100%", height: "400px"}}>
+      <TradingViewWidget />
       </div>
-      <div className="AppContainer">
-        <TradingViewWidget
-          symbols={[
-            { proName: "FOREXCOM:SPXUSD", title: "S&P 500" },
-            { proName: "FOREXCOM:NSXUSD", title: "US 100" },
-            { proName: "FX_IDC:EURUSD", title: "EUR/USD" },
-            { proName: "BITSTAMP:BTCUSD", title: "Bitcoin" },
-            { proName: "BITSTAMP:ETHUSD", title: "Ethereum" },
-          ]}
-          colorTheme="light"
-          isTransparent={false}
-          displayMode="adaptive"
-          locale="in"
-        />
-      </div> */}
     </>
   );
 }

@@ -9,10 +9,10 @@ import client from "../apollo-client";
 function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
-      <div style={{zIndex: "2"}}>
+      <div style={{zIndex: "99"}}>
         <Layout />
       </div>
-      <div style={{ marginTop: "13%", zIndex: 0 }}>
+      <div className="appjs" style={{ zIndex: 0 }}>
         <Component {...pageProps} />
       </div>
     </ApolloProvider>
