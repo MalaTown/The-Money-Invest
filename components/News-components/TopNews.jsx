@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import React from 'react'
+import React from 'react';
 import { gql, useQuery } from "@apollo/client";
 
 const GET_TOP_NEWS = gql`
