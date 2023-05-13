@@ -4,6 +4,8 @@ import React from "react";
 import { getNewsPosts } from "../services";
 import NewsPostCard from "../components/News-components/NewsPostCard";
 import { useQuery, gql } from "@apollo/client";
+import PopularNews from '../components/News-components/PopularNews'
+import TopNews from "../components/News-components/TopNews";
 
 // function NewsSection() {
 export default function News({ newsposts }) {
@@ -54,7 +56,7 @@ export default function News({ newsposts }) {
       {/* -------------------------------Top Section start------------------------------  */}
 
       <h1 className="border-black border-y-2 my-4   ">Top News</h1>
-      <div style={{ width: "1250px" }} className="flex items-center ">
+      {/* <div style={{ width: "1250px" }} className="flex items-center ">
         <div
           className="flex flex-col justify-end items-start p-1 border-2  border-black "
           style={{
@@ -135,7 +137,8 @@ export default function News({ newsposts }) {
             {data.topNews4.excerpt}
           </div>
         </div>
-      </div>
+      </div> */}
+      <TopNews />
 
       {/* /* ----------------------------- Top Section End ----------------------------  */}
 
@@ -156,64 +159,17 @@ export default function News({ newsposts }) {
             ))}
           </div>
 
+          {/* -------------------------------------------------------------------------- */}
+
           <div className="mr-4 " style={{ width: "48%" }}>
             <h1 className="border-black border-y-2 mb-2">Popular News</h1>
             <div className="row grid grid-cols-12 gap-2">
-              <div
-                className="col-span-8 bg-indigo-700 "
-                style={{
-                  //   height: "400px",
-                  //   width: "394px",
-                  marginTop: "0.25rem",
-                }}
-              >
-                <div
-                  style={{
-                    height: "190px",
-                    background: "indigo",
-                  }}
-                >
-                  first
-                </div>
-
-                <div
-                  style={{
-                    height: "190px",
-                    // width: "395px",
-                    marginTop: "0.75rem",
-                    background: "pink",
-                  }}
-                >
-                  second
-                </div>
-              </div>
-              <div
-                className="col-span-4 bg-indigo-200 "
-                style={{
-                  marginTop: "0.25rem",
-                }}
-              >
-                <div
-                  style={{
-                    height: "190px",
-                    background: "green",
-                  }}
-                >
-                  third
-                </div>
-
-                <div
-                  style={{
-                    height: "190px",
-                    marginTop: "0.75rem",
-                    background: "skyblue",
-                  }}
-                >
-                  fourth
-                </div>
-              </div>
+              <PopularNews />
             </div>
           </div>
+
+          {/* -------------------------------------------------------------------------- */}
+
           <div className="" style={{ width: "24.6%" }}>
             <h1 className="border-black border-y-2 mb-2">Trending News</h1>
             {newsposts.map((post, index) => (
