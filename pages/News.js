@@ -1,17 +1,9 @@
 /* eslint-disable */
 
 import React from "react";
-import {
-  PostCard,
-  Categories,
-  PostWidget,
-  BlogHeader,
-  NewsApi,
-} from "../components";
 import { getNewsPosts } from "../services";
 import NewsPostCard from "../components/News-components/NewsPostCard";
 import { useQuery, gql } from "@apollo/client";
-import NewsApp from "../components/News-components/NewsApp";
 
 // function NewsSection() {
 export default function News({ newsposts }) {
