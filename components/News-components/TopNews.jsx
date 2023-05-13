@@ -1,4 +1,4 @@
-/* eslint-disable quotes */
+/* eslint-disable */
 import React from 'react';
 import { gql, useQuery } from "@apollo/client";
 
