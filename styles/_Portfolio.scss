@@ -9,11 +9,8 @@
 
 
 .PFtext-container {
-    position: absolute;
     top: 50%;
     left: 20%;
-
-    transform: translate(-50%, -50%);
     color: white;
     padding: 20px;
     text-align: center;
@@ -87,14 +84,14 @@
         height: auto;
         margin: 20px;
         width: 80%;
-        filter: drop-shadow(0.2rem 0.2rem 0.4rem rgb(255, 217, 0));
+        /* filter: drop-shadow(0.2rem 0.2rem 0.4rem rgb(255, 217, 0)); */
     }
     
 
 .glow {
     border: 1px solid;
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 
     span {
         z-index: 20;

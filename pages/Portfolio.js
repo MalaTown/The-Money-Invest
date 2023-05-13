@@ -24,21 +24,27 @@ function Portfolio() {
       <div
         className="PortfolioHead"
         style={{
-          position: "relative",
-          width: "100%",
+          // position: "relative",
+          // width: "100%",
           height: "300px",
           margin: "3% 0",
           border: "solid 2px black",
+          width: "100%",
+          backgroundImage: "url('./images/PortfolioHead.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          // opacity: "0.7"
         }}
       >
-        <div className="image-container ">
-          <Image
+        <div className="image-container">
+          {/* <Image
             className="PFHeadImage"
             src="/images/PortfolioHead.png"
             fill="true"
             objectFit="cover"
             alt="Ebook Header"
-          />
+          /> */}
           <div
             className="PFtext-container"
             style={{
