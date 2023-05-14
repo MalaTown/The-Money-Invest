@@ -1,3 +1,4 @@
+/* eslint-disable*/
 import { FeaturedPosts } from '../sections/index';
 import { PostCard, Categories, PostWidget, BlogHeader } from '../components';
 import { getPosts } from '../services';
@@ -14,7 +15,7 @@ export default function Home({ posts }) {
           ))}
         </div>
         <div className="lg:col-span-4 col-span-1 ">
-          <div className="lg:sticky relative top-80 bottom-0">
+          <div className="lg:sticky top-40 bottom-0" style={{zIndex: '-1'}}>
             <PostWidget />
             <Categories />
           </div>

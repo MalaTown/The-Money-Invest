@@ -66,6 +66,14 @@ function Navbarmenu() {
           Blogs
         </Link>
         <Link
+          className={`NavItems ${activeItem === "blogs" ? "active" : ""}`}
+          href="/Quiz"
+          id="quiz"
+          onClick={handleClick}
+        >
+          Quiz
+        </Link>
+        <Link
           className={`NavItems ${activeItem === "portfolio" ? "active" : ""}`}
           href="/Portfolio"
           id="portfolio"
@@ -101,7 +109,7 @@ function Navbarmenu() {
           Contact-Us
         </Link>
       </div>
-      <div className="IconPack mr-5">
+      <div className="IconPack">
         <div className="container-2">
           <FontAwesomeIcon className="Icons icon" icon={faSearch} />
           <input type="search" id="search" placeholder="Search..." />

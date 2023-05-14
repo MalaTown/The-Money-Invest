@@ -25,12 +25,14 @@ function TopNews() {
   if (error) return <p>Error :(</p>;
 
   return (
-    <div style={{ width: "1250px" }} className="flex items-center max-md:flex-col ">
+    <div
+      // style={{ width: "1250px" }}
+      className="container flex items-center max-md:flex-col"
+    >
       <div
-        className="flex flex-col justify-end items-start p-1 border-2  border-black "
+        className="TopNews TopNews-type1 flex flex-col justify-end items-start p-1 border-2  border-black "
         style={{
-          height: "400px",
-          width: "313px",
+          width: "27.5%",
           float: "left",
           background: `
             linear-gradient(to bottom, rgba(0, 153, 247, 0.5), rgba(241, 23, 18, 0.5)),
@@ -47,10 +49,9 @@ function TopNews() {
       </div>
 
       <div
-        className="flex flex-col justify-end items-start  p-1 border-2  border-black  "
+        className="TopNews TopNews-type1 flex flex-col justify-end items-start  p-1 border-2  border-black  "
         style={{
-          height: "400px",
-          width: "624px",
+          width: "45%",
           margin: "10px",
           background: `
             linear-gradient(to bottom, rgba(21, 153, 87, 0.5), rgba(0, 76, 153, 0.5)),
@@ -66,12 +67,10 @@ function TopNews() {
         {data.topNewsPosts[1].excerpt}
       </div>
 
-      <div className="max-md:flex-1">
+      <div className="TopNews-type2">
         <div
-          className="flex flex-col justify-end items-start  p-1 border-2  border-black mb-2 "
+          className="TopNews TopNews-type2 flex flex-col justify-end items-start  p-1 border-2  border-black mb-2 max-md:mb-0"
           style={{
-            height: "195px",
-            width: "313px",
             background: `
               linear-gradient(to bottom, rgba(239, 148, 172, 0.5), rgba(59, 107, 239, 0.5)),
               url(${data.topNewsPosts[2].featuredImage.url})`,
@@ -86,10 +85,8 @@ function TopNews() {
           {data.topNewsPosts[2].excerpt}
         </div>
         <div
-          className="flex flex-col justify-end items-start  p-1 border-2  border-black "
+          className="TopNews TopNews-type2 flex flex-col justify-end items-start  p-1 border-2  border-black "
           style={{
-            height: "195px",
-            width: "313px",
             background: `
               linear-gradient(to bottom, rgba(
   linear-gradient(to bottom, rgba(255, 204, 0, 0.5), rgba(241, 23, 18, 0.5)),

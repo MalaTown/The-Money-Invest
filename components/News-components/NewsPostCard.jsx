@@ -7,7 +7,7 @@ function NewsPostCard({ post }) {
   return (
     <div>
       <div>
-        <div className="flex my-3 h-20 bg-white" style={{}}>
+        <div className="flex my-3 h-fit bg-white" style={{}}>
           <img
             src={post.featuredImage.url}
             alt=""

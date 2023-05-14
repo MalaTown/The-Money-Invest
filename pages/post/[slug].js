@@ -23,7 +23,7 @@ function PostDetails({ post }) {
           <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
         </div>
         <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky top-8">
+          <div className="relative lg:sticky top-8" style={{zIndex: '-1', paddingTop: '10rem'}}>
             <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
             <Categories />
           </div>
