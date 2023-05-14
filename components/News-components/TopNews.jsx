@@ -67,7 +67,7 @@ function TopNews() {
         {data.topNewsPosts[1].excerpt}
       </div>
 
-      <div className="TopNews-type2">
+      <div className="TopNewsBox2" >
         <div
           className="TopNews TopNews-type2 flex flex-col justify-end items-start  p-1 border-2  border-black mb-2 max-md:mb-0"
           style={{

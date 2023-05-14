@@ -33,8 +33,8 @@ export default function News({ recentnewsposts,trendingnewsposts }) {
         }
         className="container items-center border-solid border-b-2 border-black mb-4 pb-4"
       >
-        <div className="NewsSection2 NewsBoxType2 mt-4 ">
-          <div className="mr-4">
+        <div className="NewsSection2  mt-4 ">
+          <div className="mr-4 NewsBoxType2 ">
             <h1 className="border-black border-y-2 my-2 bg-white rounded-xl">
               Recent News
             </h1>

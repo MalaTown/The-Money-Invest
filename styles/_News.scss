@@ -88,8 +88,11 @@
 }
 .TopNews-type2{
     min-height: 195px;
-    width: 27.5%;
+    width: 100%;
 }
+ .TopNewsBox2 {
+    width: 27.5%;
+ }
 
 .NewsSection2{
     display: flex;
@@ -101,6 +104,8 @@
     width: 48%;
 }
 
+
+
 @media screen and (max-width: 767px) {
     .TopNews {
         width: 100% !important;
@@ -109,6 +114,9 @@
         display: flex;
         width: 100%;
         margin-right: 1%;
+    }
+    .TopNewsBox2{
+        width: 100%;
     }
     .NewsSection2{
         display: flex;
