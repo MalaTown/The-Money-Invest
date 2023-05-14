@@ -67,11 +67,13 @@ body {
  }
  @media (max-width: 768px) {
 .appjs{
-    margin-top: 50%;
+    margin-top: 35%;
 }
  }
 
 .react-multi-carousel-list {
+    z-index: -1;
+
     & .arrow-btn {
         transition: width 300ms ease;
         width: 50px;

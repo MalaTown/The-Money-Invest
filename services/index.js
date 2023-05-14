@@ -40,10 +40,10 @@ export const getPosts = async () => {
   return result.postsConnection.edges;
 };
 
-export const getNewsPosts = async () => {
+export const getRecentNewsPosts = async () => {
   const query = gql`
-    query GetNewsPosts {
-      newspostsConnection {
+    query GetRecentNewsPosts {
+      recentnewspostsConnection {
         edges {
           node {
             author {
@@ -73,7 +73,31 @@ export const getNewsPosts = async () => {
 
   const result = await request(graphqlAPI, query);
 
-  return result.newspostsConnection.edges;
+  return result.recentnewspostsConnection.edges;
+};
+
+export const getTrendingNewsPosts = async () => {
+  const query = gql`
+    query GetTrendingNewsPosts {
+      trendingnewspostsConnection {
+        edges {
+          node {
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.trendingnewspostsConnection.edges;
 };
 
 export const getCategories = async () => {

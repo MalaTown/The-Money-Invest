@@ -51,7 +51,7 @@
  .IconPack {
      display: flex;
      align-items: center;
-
+    margin-right: 16%;
  }
 
  .Icons {
@@ -190,7 +190,7 @@ background: linear-gradient(137deg, rgba(11, 92, 88, 1) 0%, rgba(1, 11, 44, 1) 4
  /* -------------------------------------------------------------------------- */
 
  .container-2 {
-     width: 250px;
+     /* width: 250px; */
      vertical-align: middle;
      white-space: nowrap;
      position: relative;

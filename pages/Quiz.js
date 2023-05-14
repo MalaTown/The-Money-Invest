@@ -95,7 +95,7 @@ function Quiz() {
   if (!started) {
     return (
       <div className=" quizpage ">
-        <form className=" bg-gray-100 text-black my-4 p-8 border-double border-2  border-black shadow-md rounded-2xl shadow-slate-400 width-30 ">
+        <form className=" bg-gray-100 text-black my-4 p-8 border-double border-2  border-black shadow-md rounded-2xl shadow-slate-400 width-30 max-md:w-4/5 ">
           <label
             for="name"
             className="my-4 border-black  border-b-2 font-cursive"
@@ -130,7 +130,7 @@ function Quiz() {
           onClick={handleStartClick}
           id="start-btn"
           class="btn"
-          className="bg-pink-600 mt-2 p-2 rounded-full border-black border-2 shadow-md shadow-black hover:bg-pink-500 hover:text-white hover:shadow-pink-800"
+          className="bg-pink-600 mt-2 px-2 rounded-full border-black border-2 shadow-md shadow-black hover:bg-pink-500 hover:text-white hover:shadow-pink-800 transition-transform hover:border-y-transparent "
         >
           Start
         </button>
@@ -217,9 +217,10 @@ function Quiz() {
           {currentQuestionIndex < quizQuestions.length - 1 ? (
             <button onClick={handleNextQuestion}>Next Question</button>
           ) : (
-            <div className=" w-1/2 my-4 py-4 border-black border-2 flex flex-col items-center rounded-xl">
+            <div className=" w-1/2 my-4 py-4 border-black border-2 flex flex-col items-center rounded-xl bg-gray-300">
               <p className="font-bold mb-2 px-2 rounded-full border-b-2 border-dashed border-black text-center">
-                Hey {name} ! You have completed the quiz.{" "}
+                Hey {name} ! 
+                You have completed the quiz.{" "}
               </p>
               <p className="font-bold mb-2 px-2 rounded-full border-b-2 border-dashed border-black text-center">
                 {calculateResult()}

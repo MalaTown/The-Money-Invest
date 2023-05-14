@@ -22,7 +22,7 @@
         padding: 1rem;
 
         .logo {
-            width: 8%;
+                max-width: 20%;
         }
     }
 }
@@ -67,11 +67,12 @@
 
     .headingText {
         font-size: 2rem;
-        
+        inline-size: max-content;
     }
 
     .logo {
-        width: 40%;
+        /* width: 40%; */
+            max-width: 20%;
     }
 
 }

@@ -7,24 +7,8 @@ function Ebook() {
   return (
     <div className="EBookBox">
       <title>Ebook</title>
-      {/* <div
-        className="EbookHead"
-        style={{ position: "", height: "200px" }}
-      >
-        <Image
-          className=""
-          src="/images/Ebookhead.png"
-          fill="true"
-          alt="Ebook Header"
-        />
-      </div> */}
 
       <h1 className="HeadText my-8 text-2xl flex justify-center ">E-Books</h1>
-      {/* <div
-        className="EbookSection"
-        style={{ backgroundImage: 'url(/images/background.jpg)', opacity: 0.2}}
-      >
-        */}
 
       <div className="EbookSection">
         <div className="lg:flex">
