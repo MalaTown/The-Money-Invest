@@ -1,19 +1,15 @@
 /* eslint-disable */
 
 import React from "react";
-import { getRecentNewsPosts} from "../services";
-import { getTrendingNewsPosts } from "../services";
-import NewsPostCard from "../components/News-components/NewsPostCard";
-import PopularNews from "../components/News-components/PopularNews";
-import TopNews from "../components/News-components/TopNews";
-import RecentNews from "../components/News-components/RecentNews";
-import TrendingNews from "../components/News-components/TrendingNews";
+import { getRecentNewsPosts} from "../../services";
+import { getTrendingNewsPosts } from "../../services";
+import NewsPostCard from "../../components/News-components/NewsPostCard";
+import PopularNews from "../../components/News-components/PopularNews";
+import TopNews from "../../components/News-components/TopNews";
 
 // function NewsSection() {
 export default function News({ recentnewsposts,trendingnewsposts }) {
   return (
-    <>
-        <title>News</title>
     <div
       className="max-md:mx-8"
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
@@ -42,10 +38,9 @@ export default function News({ recentnewsposts,trendingnewsposts }) {
             <h1 className="border-black border-y-2 my-2 bg-white rounded-xl">
               Recent News
             </h1>
-            {/* {recentnewsposts.map((post, index) => (
+            {recentnewsposts.map((post, index) => (
               <NewsPostCard key={index} post={post.node} />
-            ))} */}
-            <RecentNews />
+            ))}
           </div>
 
           <div className="mr-4 NewsBoxType1">
@@ -61,32 +56,15 @@ export default function News({ recentnewsposts,trendingnewsposts }) {
             <h1 className="border-black border-y-2 my-2 bg-white rounded-xl">
               Trending News
             </h1>
-            {/* {trendingnewsposts.map((post, index) => (
+            {trendingnewsposts.map((post, index) => (
               <NewsPostCard key={index} post={post.node} />
-            ))} */}
-            <TrendingNews />
+            ))}
           </div>
         </div>
       </div>
 
       {/* --------------------------- Second Section End ---------------------------  */}
-
-      {/*  --------------------------- Third Section Start --------------------------  */}
-
-      {/* <div
-        style={{
-          width: "1250px",
-          height: "420px",
-        }}
-        className=" justify-center my-4 bg-gray-200 "
-      >
-        <h1 className="border-black border-y-2 mb-2 h-min  ">Global News</h1>
-        <NewsApp/>
-      </div> */}
-
-      {/* --------------------------- Third Section End -------------------------- */}
     </div>
-    </>
   );
 }
 
@@ -98,6 +76,17 @@ export async function getStaticProps() {
       recentnewsposts,
       trendingnewsposts, // add this line
     },
+    revalidate: 5,
   };
 }
 
+
+export async function getStaticPaths() {
+  // Fetch the dynamic slugs from your CMS or data source
+  const slugs = await getNewsSlugs();
+
+  return {
+    paths: slugs.map((slug) => ({ params: { slug } })),
+    fallback: true,
+  };
+}

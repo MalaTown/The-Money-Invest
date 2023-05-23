@@ -1,18 +1,18 @@
 /* eslint-disable */
-import React from 'react';
+import React from "react";
 import { gql, useQuery } from "@apollo/client";
 
 const GET_TOP_NEWS = gql`
   query GetTopNews {
-    topNewsPosts(last: 4) {
+    newsPosts(where: { newsCategory: { slug: "top-news" } }, last: 4) {
       title
       slug
-      featuredImage {
-        url
-      }
       excerpt
       content {
-        text
+        raw
+      }
+      featuredImage {
+        url
       }
     }
   }
@@ -36,16 +36,16 @@ function TopNews() {
           float: "left",
           background: `
             linear-gradient(to bottom, rgba(0, 153, 247, 0.5), rgba(241, 23, 18, 0.5)),
-            url(${data.topNewsPosts[0].featuredImage.url})`,
+            url(${data.newsPosts[0].featuredImage.url})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
       >
         <p className="font-bold bg-gray-400 text-white border px-1">
-          {data.topNewsPosts[0].title}
+          {data.newsPosts[0].title}
         </p>
-        {data.topNewsPosts[0].excerpt}
+        {data.newsPosts[0].excerpt}
       </div>
 
       <div
@@ -55,51 +55,50 @@ function TopNews() {
           margin: "10px",
           background: `
             linear-gradient(to bottom, rgba(21, 153, 87, 0.5), rgba(0, 76, 153, 0.5)),
-            url(${data.topNewsPosts[1].featuredImage.url})`,
+            url(${data.newsPosts[1].featuredImage.url})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
       >
         <p className="font-bold bg-gray-400 text-white border px-1">
-          {data.topNewsPosts[1].title}
+          {data.newsPosts[1].title}
         </p>
-        {data.topNewsPosts[1].excerpt}
+        {data.newsPosts[1].excerpt}
       </div>
 
-      <div className="TopNewsBox2" >
+      <div className="TopNewsBox2">
         <div
           className="TopNews TopNews-type2 flex flex-col justify-end items-start  p-1 border-2  border-black mb-2 max-md:mb-0"
           style={{
             background: `
               linear-gradient(to bottom, rgba(239, 148, 172, 0.5), rgba(59, 107, 239, 0.5)),
-              url(${data.topNewsPosts[2].featuredImage.url})`,
+              url(${data.newsPosts[2].featuredImage.url})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
         >
           <p className="font-bold bg-gray-400 text-white border px-1">
-            {data.topNewsPosts[2].title}
+            {data.newsPosts[2].title}
           </p>
-          {data.topNewsPosts[2].excerpt}
+          {data.newsPosts[2].excerpt}
         </div>
         <div
           className="TopNews TopNews-type2 flex flex-col justify-end items-start  p-1 border-2  border-black "
           style={{
             background: `
-              linear-gradient(to bottom, rgba(
   linear-gradient(to bottom, rgba(255, 204, 0, 0.5), rgba(241, 23, 18, 0.5)),
-              url(${data.topNewsPosts[3].featuredImage.url})`,
+              url(${data.newsPosts[3].featuredImage.url})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
         >
           <p className="font-bold bg-gray-400 text-white border px-1">
-            {data.topNewsPosts[3].title}
+            {data.newsPosts[3].title}
           </p>
-          {data.topNewsPosts[3].excerpt}
+          {data.newsPosts[3].excerpt}
         </div>
       </div>
     </div>
