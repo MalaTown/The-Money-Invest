@@ -76,7 +76,14 @@ export async function getStaticProps() {
       recentnewsposts,
       trendingnewsposts, // add this line
     },
-    revalidate: 60,
+    revalidate: 5,
   };
 }
 
+
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: true,
+  };
+}
