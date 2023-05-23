@@ -68,22 +68,27 @@ export default function News({ recentnewsposts,trendingnewsposts }) {
   );
 }
 
-export async function getStaticProps() {
-  const recentnewsposts = (await getRecentNewsPosts()) || [];
-  const trendingnewsposts = (await getTrendingNewsPosts()) || []; // add this line
+// export async function getStaticProps() {
+//   const recentnewsposts = (await getRecentNewsPosts()) || [];
+//   const trendingnewsposts = (await getTrendingNewsPosts()) || []; // add this line
+//   return {
+//     props: {
+//       recentnewsposts,
+//       trendingnewsposts, // add this line
+//     },
+//     revalidate: 5,
+//   };
+// }
+
+
+export async function getServerSideProps() {
+  const recentnewsposts = await getRecentNewsPosts();
+  const trendingnewsposts = await getTrendingNewsPosts();
+
   return {
     props: {
       recentnewsposts,
-      trendingnewsposts, // add this line
+      trendingnewsposts,
     },
-    revalidate: 5,
-  };
-}
-
-
-export async function getStaticPaths() {
-  return {
-    paths: [],
-    fallback: true,
   };
 }
