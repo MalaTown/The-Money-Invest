@@ -328,6 +328,27 @@ export const getComments = async (slug) => {
   return result.comments;
 };
 
+export const getRecentPosts = async () => {
+  const query = gql`
+    query GetPostDetails() {
+      posts(
+        orderBy: createdAt_ASC
+        last: 3
+      ) {
+        title
+        featuredImage {
+          url
+        }
+        createdAt
+        slug
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+
+  return result.posts;
+};
+
 
 export const GET_QUIZ_QUESTIONS = async () => {
   const query = gql`
