@@ -64,21 +64,6 @@ export default function News({ recentnewsposts,trendingnewsposts }) {
       </div>
 
       {/* --------------------------- Second Section End ---------------------------  */}
-
-      {/*  --------------------------- Third Section Start --------------------------  */}
-
-      {/* <div
-        style={{
-          width: "1250px",
-          height: "420px",
-        }}
-        className=" justify-center my-4 bg-gray-200 "
-      >
-        <h1 className="border-black border-y-2 mb-2 h-min  ">Global News</h1>
-        <NewsApp/>
-      </div> */}
-
-      {/* --------------------------- Third Section End -------------------------- */}
     </div>
   );
 }
@@ -91,6 +76,7 @@ export async function getStaticProps() {
       recentnewsposts,
       trendingnewsposts, // add this line
     },
+    revalidate: 60,
   };
 }
 
