@@ -349,6 +349,57 @@ export const getRecentPosts = async () => {
   return result.posts;
 };
 
+export const getTopNews = async () => {
+  const query = gql`
+    query GetTopNews($slug: String!) {
+      topNewsPost(where: { slug: $slug }) {
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.getTopNews;
+};
+
+// export const getSecondNewsPosts = async () => {
+//   const query = gql`
+//     query GetSecondNewsPosts {
+//       newsposts(orderBy: publishedAt_DESC, first: 1, skip: 1) {
+//         edges {
+//           node {
+//             author {
+//               bio
+//               id
+//               name
+//               photo {
+//                 url
+//               }
+//             }
+//             createdAt
+//             slug
+//             title
+//             excerpt
+//             featuredImage {
+//               url
+//             }
+//             categories {
+//               name
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `;
+
+//   const result = await request(graphqlAPI, query);
+
+//   return result.newsposts.edges;
+// };
 
 export const GET_QUIZ_QUESTIONS = async () => {
   const query = gql`
