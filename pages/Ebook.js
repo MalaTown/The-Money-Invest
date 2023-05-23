@@ -140,14 +140,6 @@ function Ebook() {
           className="EbookSection__image"
           src="/images/background.jpg"
           alt="Background"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            zIndex: -1,
-            opacity: 0.3,
-            margin: "10px",
-          }}
         />
       </div>
 
