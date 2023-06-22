@@ -1,19 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable */
 import React from "react";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//   solid,
-//   regular,
-//   brands,
-//   icon,
-// } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
-import Image from "next/image";
-import Polling from "./PollingSection";
-import StockdioChart from "./Stockchart";
-// import NewsPostCard from './NewsPostCard';
+import CompoundInterestCalculator from "./Calculator";
+import RecentPosts from "./RecentPost";
+import MixedNewsComponent from "./News-components/MixedNewsComponent";
 
 function Content() {
   return (
@@ -36,7 +25,6 @@ function Content() {
         </h1>
 
         <div className="flex">
-
           <a href="https://zerodha.com/open-account?c=AL3820">
             <img
               // className="w-14 h-14 logoimage border-4 border-blue-900 rounded-full p-1"
@@ -69,77 +57,37 @@ function Content() {
       </div>
       <div
         style={{ display: "flex" }}
-        className=" content-box lg:mx-16 flex flex-col md:flex-row"
+        className=" lg:mx-16 flex flex-col md:flex-row my-8"
       >
-        <div className="row-span-3">
+        <div
+          className="p-2 "
+          style={{
+            backgroundColor: "#0f4772",
+            boxShadow: "black 0px 2px 10px",
+            borderRadius: "10px",
+          }}
+        >
+          <MixedNewsComponent />
+        </div>
+        <div
+          style={{ display: "flex" }}
+          className=" lg:mx-16 flex flex-col md:flex-row"
+        >
           <div
-            className="p-7 max-md:p-4"
+            className="p-2 "
             style={{
               backgroundColor: "#0f4772",
               boxShadow: "black 0px 2px 10px",
               borderRadius: "10px",
             }}
           >
-            <div
-              className="PollContainer"
-              style={{
-                width: "100%",
-                backgroundImage: "url('./images/QuizBg.png')",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                // opacity: "0.7"
-              }}
-            >
-              <h1 className="text-2xl font-serif font-semibold max-md:text-base">
-                Market Sentiments
-              </h1>
-              <Polling />
-              <div className="MStext">
-                <a className="text-gray-600 " href="">
-                  Learn More
-                </a>{" "}
-                about Market Status{" "}
-              </div>
-            </div>
-          </div>
-
-          <div className="DivChart" style={{ width: "100%" }}>
-            <h1>Market Data</h1>
-            <StockdioChart />
+            <CompoundInterestCalculator />
           </div>
         </div>
-        <div
-          className="NewsContainer p-7 my-4 lg:ml-20 md:m-0 sm:m-0 md:p-6 md:p-6 "
-          style={{
-            backgroundColor: "#0f4772",
-            boxShadow: "black 0px 2px 10px",
-            borderRadius: "10px",
-            backgroundImage: "url('./images/QuickNewsBG.png')",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+      </div>
 
-          }}
-        >
-          <div
-            className="NewsBlock lg:w-72 md:w-full md:p-3"
-            // style={{
-            //   // backgroundColor: "white",
-            //   border: "1px solid",
-            //   height: "410px",
-            //   padding: "20px",
-            //   // position: "relative",
-            //   marginTop: "10%",
-            //   marginRight: "32px",
-            // }}
-          >
-            <h1>Latest Posts</h1>
-            {/* {newsposts.map((post, index) => (
-            <NewsPostCard key={index} post={post.node} />
-          ))} */}
-          </div>
-        </div>
+      <div className="my-8 ">
+        <RecentPosts />
       </div>
     </div>
   );

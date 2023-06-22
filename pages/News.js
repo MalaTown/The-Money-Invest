@@ -10,7 +10,7 @@ import RecentNews from "../components/News-components/RecentNews";
 import TrendingNews from "../components/News-components/TrendingNews";
 
 // function NewsSection() {
-export default function News({ recentnewsposts,trendingnewsposts }) {
+export default function News() {
   return (
     <>
         <title>News</title>
@@ -90,14 +90,14 @@ export default function News({ recentnewsposts,trendingnewsposts }) {
   );
 }
 
-export async function getStaticProps() {
-  const recentnewsposts = (await getRecentNewsPosts()) || [];
-  const trendingnewsposts = (await getTrendingNewsPosts()) || []; // add this line
-  return {
-    props: {
-      recentnewsposts,
-      trendingnewsposts, // add this line
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const recentnewsposts = (await getRecentNewsPosts()) || [];
+//   const trendingnewsposts = (await getTrendingNewsPosts()) || []; // add this line
+//   return {
+//     props: {
+//       recentnewsposts,
+//       trendingnewsposts, // add this line
+//     },
+//   };
+// }
 

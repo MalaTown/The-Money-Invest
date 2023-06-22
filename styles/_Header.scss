@@ -4,14 +4,14 @@
 .HeaderContainer {
     /* position: fixed; */
     /* background-color: #f2f3eb; */
-    background-image: url("../public/images/background/bg1.jpg");
+    /* background-image: url("../public/images/background/bg1.jpg"); */
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
      overflow: hidden;
-    /* background-color: #ffffff;  */
+    background-color: #ffffff; 
 }
 
 @media (min-width: 768px) {

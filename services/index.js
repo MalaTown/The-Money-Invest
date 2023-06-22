@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable */
 import { request, gql } from "graphql-request";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
@@ -40,16 +40,17 @@ export const getPosts = async () => {
   return result.postsConnection.edges;
 };
 
-export const getRecentNewsPosts = async () => {
+export const getNewsPosts = async () => {
   const query = gql`
-    query GetRecentNewsPosts {
-      recentnewspostsConnection {
+    query MyQuery {
+      newsPostsConnection {
         edges {
+          cursor
           node {
             author {
               bio
-              id
               name
+              id
               photo {
                 url
               }
@@ -61,15 +62,17 @@ export const getRecentNewsPosts = async () => {
             featuredImage {
               url
             }
+            newsCategory {
+              name
+              slug
+            }
           }
         }
       }
     }
   `;
-
   const result = await request(graphqlAPI, query);
-
-  return result.recentnewspostsConnection.edges;
+  return result.newsPostsConnection.edges;
 };
 
 export const getTrendingNewsPosts = async () => {
@@ -148,7 +151,8 @@ export const getPostDetails = async (slug) => {
 export const getNewsPostDetails = async (slug) => {
   const query = gql`
     query GetNewsPostDetails($slug: String!) {
-      newsposts(where: { slug: $slug }) {
+      newsPosts(where: { slug: $slug }) {
+        slug
         title
         excerpt
         featuredImage {
@@ -162,11 +166,10 @@ export const getNewsPostDetails = async (slug) => {
           }
         }
         createdAt
-        slug
         content {
           raw
         }
-        categories {
+        newsCategory {
           name
           slug
         }
@@ -174,9 +177,11 @@ export const getNewsPostDetails = async (slug) => {
     }
   `;
 
-  const result = await request(graphqlAPI, query, { slug });
+  const variables = { slug }; // Create an object to hold the variables
 
-  return result.newspost;
+  const result = await request(graphqlAPI, query, variables);
+
+  return result.newsPosts[0];
 };
 
 export const getSimilarPosts = async (categories, slug) => {
@@ -327,6 +332,36 @@ export const getComments = async (slug) => {
 
   return result.comments;
 };
+
+export const submitNewsComment = async (obj) => {
+  const result = await fetch("/api/newsComments", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(obj),
+  });
+
+  return result.json();
+};
+
+export const getNewsComments = async (slug) => {
+  const query = gql`
+    query GetNewsComments($slug: String!) {
+      newsComments(where: { newsPost: { slug: $slug } }) {
+        name
+        createdAt
+        comment
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.newsComments;
+};
+
+
 
 export const getRecentPosts = async () => {
   const query = gql`

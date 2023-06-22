@@ -1,12 +1,5 @@
 /* eslint-disable */
 import React from "react";
-import {
-  BsFacebook,
-  BsTwitter,
-  BsLinkedin,
-  BsYoutube,
-  BsInstagram,
-} from "react-icons/bs";
 
 function Footer() {
   return (
@@ -27,93 +20,30 @@ function Footer() {
                     Trending News on a click. Explore For more...
                   </p>
                 </div>
-                <div className="kilimanjaro_part w-1/2">
+                <div className="kilimanjaro_part ">
                   <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
-                    Social Links
+                    Important Links
                   </h5>
-                  <ul className="kilimanjaro_social_links">
+                  <ul className="kilimanjaro_links">
                     <li>
-                      <a href="https://www.facebook.com/Themoneyinvest">
-                        <BsFacebook style={{ marginRight: "5px" }} />
-                        Facebook
+                      <a href="/TermAndConditions">
+                        <i className="fa fa-angle-right" aria-hidden="true" />
+                        Terms & Conditions
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/moneyinvestcom?t=Xw0Unm-kHX-wq8MYmkV4ug&s=08">
-                        <BsTwitter style={{ marginRight: "5px" }} />
-                        Twitter
+                      <a href="PrivacyPolicy">
+                        <i className="fa fa-angle-right" aria-hidden="true" />
+                        Privacy Policy
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/in/the-money-invest-958683270/">
-                        <BsLinkedin style={{ marginRight: "5px" }} /> LinkedIn
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://youtube.com/@themoneyinvest">
-                        <BsYoutube style={{ marginRight: "5px" }} /> YouTube
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/themoneyinvestcom/">
-                        <BsInstagram style={{ marginRight: "5px" }} /> Instagram
+                      <a href="/Disclaimer">
+                        <i className="fa fa-angle-right" aria-hidden="true" />
+                        Disclaimer
                       </a>
                     </li>
                   </ul>
-                </div>
-              </div>
-              <div className="row flex gap-10">
-                <div className="col-12 col-md-6 col-lg-3 w-1/2">
-                  <div className="kilimanjaro_part ">
-                    <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
-                      Important Links
-                    </h5>
-                    <ul className="kilimanjaro_links">
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-angle-right" aria-hidden="true" />
-                          Terms & Conditions
-                        </a>
-                      </li>
-                      {/* <li>
-                        <a href="#">
-                          <i className="fa fa-angle-right" aria-hidden="true" />
-                          About Licences
-                        </a>
-                      </li> */}
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-angle-right" aria-hidden="true" />
-                          Help & Support
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-angle-right" aria-hidden="true" />
-                          Privacy Policy
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="col-12 col-md-6 col-lg-3 w-1/2">
-                  <div className="kilimanjaro_part">
-                    <h5 className="border-white border-b-2 rounded-xl px-2 w-fit">
-                      Quick Contact
-                    </h5>
-                    <div className="lg:flex lg:justify-around ">
-                      <div className="kilimanjaro_single_contact_info">
-                        <h5>Phone:</h5>
-                        <p>+255 255 54 53 52 </p>
-                      </div>
-                      <div className="kilimanjaro_single_contact_info">
-                        <h5>Email:</h5>
-                        <p>support@email.com </p>
-                        <p> company@email.com</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

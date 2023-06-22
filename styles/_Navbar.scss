@@ -22,9 +22,6 @@
  }
 
  @media (max-width: 768px) {
-     .ButtonContainer {
-         display: none;
-     }
 
      .NavItemDiv {
          display: flex;
@@ -94,13 +91,6 @@
          margin-right: 10px;
      }
 
-     .Ext {
-         display: none;
-     }
-
-     .IconPack {
-         display: none;
-     }
  }
  
 @media (min-width: 768px) {
@@ -112,7 +102,6 @@
          .NavItemDiv {
              list-style: none;
              display: flex;
-             margin-left: 14rem;
 
              .NavItems {
                  position: relative;

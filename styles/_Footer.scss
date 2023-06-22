@@ -4,10 +4,11 @@
     border: solid black;
     padding: 25px;
     font-size: 12pt;
-    width: inherit; 
+    width: inherit;
 }
+
 @media (max-width:768px) {
-    .FooterContainer{
+    .FooterContainer {
         padding: 15px;
     }
 }
@@ -17,7 +18,7 @@
     /* position: relative; */
     z-index: 1;
 
-    h5{
+    h5 {
         font-weight: 600;
     }
 }
@@ -43,6 +44,7 @@
 
 .kilimanjaro_part {
     margin-bottom: 30px;
+    width: 50%;
 }
 
 .foo_top_header_one .kilimanjaro_part>h5 {
@@ -168,7 +170,7 @@ top-15 {
     margin-right: 10px;
 }
 
-.kilimanjaro_social_links a:hover{
+.kilimanjaro_social_links a:hover {
     background-color: #000000;
     color: white;
     border: 1px solid #fff;
