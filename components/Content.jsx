@@ -71,10 +71,10 @@ function Content() {
         </div>
         <div
           style={{ display: "flex" }}
-          className=" lg:mx-16 flex flex-col md:flex-row"
+          className=" lg:mx-16 flex flex-col md:flex-row mt-6 lg:mt-0 w-full lg:w-2/4 "
         >
           <div
-            className="p-2 "
+            className="p-2 w-full"
             style={{
               backgroundColor: "#0f4772",
               boxShadow: "black 0px 2px 10px",

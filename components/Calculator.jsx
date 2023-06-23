@@ -1,73 +1,85 @@
-/* eslint-disable */
+/* eslint-disable */ 
 import React, { useState } from "react";
 
 const CompoundInterestCalculator = () => {
   const [principal, setPrincipal] = useState("");
-  const [interestRate, setInterestRate] = useState("");
-  const [time, setTime] = useState("");
-  const [compoundingFrequency, setCompoundingFrequency] = useState("");
-  const [result, setResult] = useState(null);
+  const [rate, setRate] = useState("");
+  const [tenure, setTenure] = useState("");
+  const [frequency, setFrequency] = useState(1); // New state for compound frequency
+  const [compoundInterest, setCompoundInterest] = useState("");
 
-  const calculateCompoundInterest = () => {
-    const amount =
-      principal *
-      Math.pow(
-        1 + interestRate / compoundingFrequency,
-        compoundingFrequency * time
-      );
-    const interest = amount - principal;
-    setResult({ amount, interest });
+  const calculateInterest = () => {
+    const p = parseFloat(principal);
+    const r = parseFloat(rate) / 100;
+    const t = parseFloat(tenure) / 12; // Convert tenure to years
+    const n = parseInt(frequency);
+    const compoundInterest = p * (Math.pow(1 + r / n, n * t) - 1);
+    setCompoundInterest(compoundInterest.toFixed(2));
   };
 
   return (
-    <div className="compound-interest-calculator">
-      <h1 className="text-lg font-bold ont-bold border-b-4 border-black mb-2 ">
+    <div>
+      <h2 className="text-base text-white border-white font-bold ont-bold border-b-4 mb-2 text-center">
         Compound Interest Calculator
-      </h1>
-      <div className="input-group">
-        <label>Principal Amount:</label>
-        <input
-          type="number"
-          value={principal}
-          onChange={(e) => setPrincipal(parseFloat(e.target.value))}
-        />
+      </h2>
+      <div className="bg-white p-2 rounded-lg">
+        <div className="mb-4">
+          <label className="block mb-2">Principal Amount:</label>
+          <input
+            type="number"
+            value={principal}
+            onChange={(e) => setPrincipal(e.target.value)}
+            className="border-black border-2 px-2 py-1 rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block mb-2">Annual Interest Rate (%):</label>
+          <input
+            type="number"
+            value={rate}
+            onChange={(e) => setRate(e.target.value)}
+            className="border-black border-2 px-2 py-1 rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block mb-2">Tenure (months):</label>
+          <input
+            type="number"
+            value={tenure}
+            onChange={(e) => setTenure(e.target.value)}
+            className="border-black border-2 px-2 py-1 rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block mb-2">Compound Frequency:</label>
+          <select
+            className="border-black border-2 px-2 py-1 rounded"
+            value={frequency}
+            onChange={(e) => setFrequency(e.target.value)}
+          >
+            <option value={1}>Annually</option>
+            <option value={2}>Semi-annually</option>
+            <option value={4}>Quarterly</option>
+            <option value={12}>Monthly</option>
+          </select>
+        </div>
+        <div className="flex justify-center">
+          <button
+            onClick={calculateInterest}
+            className="border-solid px-4 py-2 border-black rounded-full bg-gray-600 text-white hover:bg-white hover:text-black transition duration-700"
+          >
+            Calculate
+          </button>
+        </div>
       </div>
-      <div className="input-group">
-        <label>Interest Rate:</label>
-        <input
-          type="number"
-          value={interestRate}
-          onChange={(e) => setInterestRate(parseFloat(e.target.value))}
-        />
-      </div>
-      <div className="input-group">
-        <label>Time (in years):</label>
-        <input
-          type="number"
-          value={time}
-          onChange={(e) => setTime(parseFloat(e.target.value))}
-        />
-      </div>
-      <div className="input-group">
-        <label>Compounding Frequency:</label>
-        <input
-          type="number"
-          value={compoundingFrequency}
-          onChange={(e) => setCompoundingFrequency(parseFloat(e.target.value))}
-        />
-      </div>
-      <div className="flex justify-center">
-      <button
-        onClick={calculateCompoundInterest}
-        className=" border-solid px-1 border-black rounded-full bg-gray-600 text-white hover:bg-white hover:text-black transition duration-700"
-      >
-        Calculate
-      </button>
-      </div>
-      {result && (
-        <div className="result">
-          <p>Final Amount: {result.amount}</p>
-          <p>Interest Earned: {result.interest}</p>
+      {compoundInterest && (
+        <div className="bg-white px-2 my-4 rounded-lg">
+          <div>
+            Your interest is {compoundInterest} 
+            <br/>
+            your principal amount is{" "}
+            {principal}
+          </div>
         </div>
       )}
     </div>

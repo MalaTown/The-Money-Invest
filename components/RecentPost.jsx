@@ -29,7 +29,7 @@ const HomePage = () => {
         {recentPosts.map((post) => (
           <div
             key={post.slug}
-            className="recent-post border-2 border-black p-2 rounded-lg w-full lg:w-2/6 lg:mx-4 h-fit sm:place-content-center h-auto"
+            className="recent-post border-2 border-black p-2 rounded-lg w-full lg:w-2/6 lg:mx-4 sm:place-content-center h-auto"
           >
             <img
               src={post.featuredImage.url}
