@@ -12,6 +12,7 @@
     flex-direction: column;
      overflow: hidden;
     background-color: #ffffff; 
+    padding-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -40,23 +41,16 @@
 
 
 @media (max-width: 768px) {
-
     /* Phone-Screen */
+
     .headerBox {
         display: flex;
-        /* flex-direction: column; */
-        padding: 2% 10% 2% 10%;
+        padding: 3% 10% 3% 10%;
     }
 
     .PhoneHead {
         display: flex;
         justify-content: space-between;
-    }
-
-    .BellIconDiv {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
     }
 
     .headerBox {

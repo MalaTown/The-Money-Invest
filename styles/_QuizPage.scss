@@ -12,9 +12,6 @@
     font-family: cursive;
     font-size: 15pt;
 }
-.font-cursive{
-        font-family: cursive;
-}
 .width-30{
     width: 30%;
 }
@@ -31,7 +28,6 @@
     transition: all 0.3s ease-in-out;
 
      &:hover{
-        background-color: skyblue;
         border: solid 1px black
     }
 }

@@ -28,12 +28,6 @@ function Header() {
           </div>
         </div>
       </Link>
-      <div className="BellIconDiv">
-        <a href="" style={{ textDecoration: "none", color: "black" }}>
-          {/* <FontAwesomeIcon className="Icons BellIcon" icon={solid("bell")} /> */}
-        </a>
-      </div>
-
       <Navbar />
     </div>
   );

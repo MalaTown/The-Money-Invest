@@ -94,10 +94,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
     .bm-burger-button {
         display: flex;
         position: absolute;
-        width: 20px;
-        height: 18px;
-        left: 12px;
-        top: 10px;
+        width: 17px;
+        height: 16px;
+        left: 7px;
+        top: 8px;
     }
 
     .BellIcon {
@@ -106,10 +106,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
         height: 20px;
 
     }
+
     .bm-burger-bars {
         background: #000;
     }
 }
 
 @media (max-width: 768px) {
-    .bm-burger-button {}}
+    .bm-burger-button {}
+}
