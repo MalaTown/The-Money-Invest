@@ -9,6 +9,12 @@
      margin: 2%;
  }
 
+ @media (max-width: 1024px) {
+     .Ext {
+         display: none;
+     }
+ }
+
  .NavItems {
      text-align: center;
      padding: 0 1rem;
@@ -16,12 +22,12 @@
      white-space: nowrap;
      font-weight: 600;
      font-size: 2vw;
-     padding: 0 1.5vw;
+     padding: 0px 2vw;
      text-decoration: none;
      flex-wrap: wrap;
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 1024px) {
 
      .NavItemDiv {
          display: flex;
@@ -38,8 +44,8 @@
          color: white;
          white-space: nowrap;
          font-weight: 600;
-         font-size: 2.8vw;
-         padding: 0 1vw;
+            font-size: 2vw;
+                padding: 0px 2vw;
 
      }
  }
@@ -48,7 +54,7 @@
  .IconPack {
      display: flex;
      align-items: center;
-    margin-right: 16%;
+     margin-right: 16%;
  }
 
  .Icons {
@@ -79,11 +85,7 @@
      .navbar {
          display: flex;
          justify-content: center;
-     }
-
-     .NavItemDiv {
-         margin-right: 0;
-         margin-left: 20px;
+         height: 25px;
      }
 
      .NavItems {
@@ -92,8 +94,8 @@
      }
 
  }
- 
-@media (min-width: 768px) {
+
+ @media (min-width: 1024px) {
      Nav {
 
          position: relative;
@@ -170,12 +172,13 @@
  /* Color = background: rgb(11, 92, 88);
 background: linear-gradient(137deg, rgba(11, 92, 88, 1) 0%, rgba(1, 11, 44, 1) 45%); */
 
-/* -------------------------------------------------------------------------- */
+ /* -------------------------------------------------------------------------- */
 
-.NavItemDiv a.active {
-    border-bottom: 2px solid #00FFFF;
-    transition: border
-}
+ .NavItemDiv a.active {
+     border-bottom: 2px solid #00FFFF;
+     transition: border
+ }
+
  /* -------------------------------------------------------------------------- */
 
  .container-2 {

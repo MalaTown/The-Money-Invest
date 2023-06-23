@@ -64,9 +64,14 @@ body {
     margin-top: 10%;
 }
  }
+  @media (max-width: 1024px) {
+      .appjs {
+          margin-top: 20%;
+      }
+  }
  @media (max-width: 768px) {
 .appjs{
-    margin-top: 35%;
+    margin-top: 30%;
 }
  }
 

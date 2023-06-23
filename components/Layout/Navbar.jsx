@@ -71,7 +71,7 @@ function Navbarmenu() {
           Affiliate
         </Link>
         <Link
-          className={`NavItems Ext ${
+          className={`NavItems ${
             activeItem === "contactus" ? "active" : ""
           }`}
           href="/ContactUs"

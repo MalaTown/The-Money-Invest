@@ -26,9 +26,6 @@ function Sidebar() {
         <Link className="menu-item" href="/Quiz">
           Quiz
         </Link>
-        <Link className="menu-item" href="/ContactUs">
-          Contact-Us
-        </Link>
         <Link className="menu-item" href="/AboutUs">
           About-Us
         </Link>
