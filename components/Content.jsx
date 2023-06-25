@@ -5,12 +5,11 @@ import CompoundInterestCalculator from "./Calculator";
 import RecentPosts from "./RecentPost";
 import MixedNewsComponent from "./News-components/MixedNewsComponent";
 
+
 function Content() {
   return (
     <div className="MainDataDiv">
-      <div
-        className="ContentDiv"
-      >
+      <div className="ContentDiv">
         <h5 className="TagLine"> YOUR FINANACIAL MARKET BOSS </h5>
         <h1 className="Heading" style={{ textAlign: "start" }}>
           The Money Invest
@@ -27,7 +26,7 @@ function Content() {
               className="topicons"
             />
           </Link>
-          <Link href="">
+          <Link href="https://wazirx.com/invite/nc8g2fgz">
             <img
               src="/images/Crypto_top_icon.png"
               width="150"
@@ -38,6 +37,8 @@ function Content() {
           </Link>
         </div>
       </div>
+      <div className="background-div"></div>
+
       <div
         style={{ display: "flex" }}
         className=" lg:mx-16 flex flex-col lg:flex-row my-8"

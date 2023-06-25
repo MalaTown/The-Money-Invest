@@ -20,7 +20,7 @@ function TermAndConditions() {
       >
         Term & Conditions
       </h1>
-      <div style={{ margin: "8rem", marginBottom: "1%", marginTop: "2%" }}>
+      <div className="lg:mx-32 " style={{ marginBottom: "1%", marginTop: "2%" }}>
         <div style={{ borderBottom: "2px dotted" }}>
           <h2 style={{ margin: "3%", fontWeight: "600", fontSize: "1.3rem" }}>
             TERM OF USE:-

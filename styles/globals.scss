@@ -23,7 +23,7 @@ body {
     margin: 0;
     /* font-family: 'Montserrat', sans-serif; */
     /* background: #cff2ff; */
-    
+
     &:before {
         content: '';
         content: "";
@@ -59,21 +59,29 @@ body {
         }
     }
 }
- @media (min-width: 768px) {
-.appjs{
-    margin-top: 10%;
+
+@media (min-width: 768px) {
+    .appjs {
+        margin-top: 16%;
+    }
 }
- }
-  @media (max-width: 1024px) {
-      .appjs {
-          margin-top: 20%;
-      }
-  }
- @media (max-width: 768px) {
-.appjs{
-    margin-top: 30%;
+
+@media (max-width: 1024px) {
+    .appjs {
+        margin-top: 21%;
+    }
 }
- }
+
+@media (max-width: 768px) {
+    .appjs {
+        margin-top: 32%;
+    }
+}
+@media (max-width: 320px) {
+    .appjs {
+        margin-top: 37%;
+    }
+}
 
 .react-multi-carousel-list {
     z-index: -1;
@@ -88,7 +96,8 @@ body {
     }
 
 }
-.react-multi-carousel-item{
+
+.react-multi-carousel-item {
     margin: 0 10px;
 }
 
@@ -101,6 +110,28 @@ a {
     box-sizing: border-box;
 }
 
-.-z-1{
-z-index: -1;
+.-z-1 {
+    z-index: -1;
+}
+
+.background-div {
+    background-image: url(../public/images/Marketing.svg);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+@media (max-width: 1024px) {
+
+    .background-div {
+    background-image: url(../public/images/Marketing.svg);
+        width: 100%;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 }

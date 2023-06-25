@@ -23,9 +23,8 @@ function Header() {
             width="100"
             alt="company-logo"
           />
-          <div>
             <h1 className="headingText"> The Money Invest </h1>
-          </div>
+
         </div>
       </Link>
       <Navbar />
