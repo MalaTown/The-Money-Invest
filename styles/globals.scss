@@ -60,13 +60,20 @@ body {
     }
 }
 
-@media (min-width: 768px) {
+ @media (max-width: 1441px) {
     .appjs {
-        margin-top: 16%;
+        margin-top: 10%;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
+    .appjs {
+        margin-top: 16%;
+    }
+} 
+
+@media (max-width: 769px) {
+
     .appjs {
         margin-top: 21%;
     }
@@ -77,6 +84,7 @@ body {
         margin-top: 32%;
     }
 }
+
 @media (max-width: 320px) {
     .appjs {
         margin-top: 37%;
@@ -127,7 +135,7 @@ a {
 @media (max-width: 1024px) {
 
     .background-div {
-    background-image: url(../public/images/Marketing.svg);
+        background-image: url(../public/images/Marketing.svg);
         width: 100%;
         height: 250px;
         background-repeat: no-repeat;
