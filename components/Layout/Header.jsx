@@ -9,7 +9,7 @@ import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <div className="HeaderContainer fixed ">
+    <div className="HeaderContainer fixed z-50">
       <div>
         <Sidebar pageWrapId="page-wrap" outerContainerId="outer-container" />
       </div>

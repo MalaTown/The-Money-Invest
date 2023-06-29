@@ -7,7 +7,8 @@
 @import "./_Sidebar.scss";
 @import "./_Blog.scss";
 @import "./_ContactUs.scss";
-@import "./_Portfolio.scss";
+@import "./_Articles.scss";
+@import "./_Affiliate.scss";
 @import "./_QuizPage.scss";
 
 @tailwind base;
@@ -62,7 +63,7 @@ body {
 
  @media (max-width: 1441px) {
     .appjs {
-        margin-top: 10%;
+        margin-top: 12%;
     }
 }
 
@@ -91,23 +92,6 @@ body {
     }
 }
 
-.react-multi-carousel-list {
-    z-index: -1;
-
-    & .arrow-btn {
-        transition: width 300ms ease;
-        width: 50px;
-
-        &:hover {
-            width: 60px;
-        }
-    }
-
-}
-
-.react-multi-carousel-item {
-    margin: 0 10px;
-}
 
 a {
     color: inherit;
@@ -129,6 +113,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin-top: -100px;
 }
 
 
@@ -141,5 +126,10 @@ a {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        margin-top: 0px;
     }
+}
+
+.react-multi-carousel-list{
+    z-index: 0;
 }
