@@ -439,10 +439,10 @@ export const Get_Articles = async () => {
   return result.articles;
 };
 
-export const Get_Affiliate = async () => {
+export const Get_Affiliates = async () => {
   const query = gql`
-    query GetAffiliate {
-      affiliate {
+    query Get_Affiliates {
+      affiliates {
         title
         slug
         content {
@@ -460,5 +460,5 @@ export const Get_Affiliate = async () => {
 
   const result = await request(graphqlAPI, query);
 
-  return result.affiliate;
+  return result.affiliates;
 };

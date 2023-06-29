@@ -1,33 +1,33 @@
-/* eslint-disable */
+/* eslint-disable  */
 import React, { useState, useEffect } from "react";
-import { Get_Affiliate } from "../services";
+import { Get_Affiliates } from "../services";
 
-const Affiliate = () => {
-  const [affiliate, setAffiliate] = useState([]);
+const Affiliates = () => {
+  const [affiliates, setAffiliates] = useState([]);
 
   useEffect(() => {
-    const fetchAffiliate = async () => {
+    const fetchAffiliates = async () => {
       try {
-        const fetchedAffiliate = await Get_Affiliate();
-        setAffiliate(fetchedAffiliate);
+        const fetchedAffiliates = await Get_Affiliates();
+        setAffiliates(fetchedAffiliates);
       } catch (error) {
-        console.error("Error fetching affiliate:", error);
+        console.error("Error fetching affiliates:", error);
       }
     };
 
-    fetchAffiliate();
+    fetchAffiliates();
   }, []);
 
   return (
     <div className="flex flex-wrap justify-center">
-      {affiliate.map((affiliate) => (
+      {affiliates.map((affiliate) => (
         <div
           key={affiliate.slug}
-          className="affiliate w-1/3 m-4 lg:mx-8 lg:p-4 shadow-xl "
+          className="affiliate w-1/3 m-4 lg:mx-8 lg:p-4 shadow-xl"
         >
           <div className="p-2">
             <img
-              className="rounded-lg"
+              className="rounded-lg shadow-xl "
               src={affiliate.featuredImage.url}
               alt={affiliate.title}
             />
@@ -41,4 +41,4 @@ const Affiliate = () => {
   );
 };
 
-export default Affiliate;
+export default Affiliates;
