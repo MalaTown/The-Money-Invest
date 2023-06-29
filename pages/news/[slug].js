@@ -32,8 +32,8 @@ export default function NewsPostDetailPage({ post }) {
         <div className="col-span-1 lg:col-span-8  border-black border-2 p-2 rounded-lg">
           <NewsPostDetail post={post} />
           <Author author={post.author} />
-          <NewsCommentsForm slug={post.slug} />
-          <NewsComments slug={post.slug} />
+          {/* <NewsCommentsForm slug={post.slug} />
+          <NewsComments slug={post.slug} /> */}
           <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
         </div>
         <div className="col-span-1 lg:col-span-4">

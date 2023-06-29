@@ -361,8 +361,6 @@ export const getNewsComments = async (slug) => {
   return result.newsComments;
 };
 
-
-
 export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
@@ -400,42 +398,6 @@ export const getTopNews = async () => {
   return result.getTopNews;
 };
 
-// export const getSecondNewsPosts = async () => {
-//   const query = gql`
-//     query GetSecondNewsPosts {
-//       newsposts(orderBy: publishedAt_DESC, first: 1, skip: 1) {
-//         edges {
-//           node {
-//             author {
-//               bio
-//               id
-//               name
-//               photo {
-//                 url
-//               }
-//             }
-//             createdAt
-//             slug
-//             title
-//             excerpt
-//             featuredImage {
-//               url
-//             }
-//             categories {
-//               name
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `;
-
-//   const result = await request(graphqlAPI, query);
-
-//   return result.newsposts.edges;
-// };
-
 export const GET_QUIZ_QUESTIONS = async () => {
   const query = gql`
     query GetQuizQuestions($difficulty: Difficulty!) {
@@ -451,4 +413,28 @@ export const GET_QUIZ_QUESTIONS = async () => {
   const result = await request(graphqlAPI, query);
 
   return result.quizQuestions;
+};
+
+export const Get_Articles = async () => {
+  const query = gql`
+    query GetArticles {
+      articles {
+        title
+        slug
+        content {
+          raw
+        }
+        featuredImage {
+          url
+        }
+        author {
+          name
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.articles;
 };
