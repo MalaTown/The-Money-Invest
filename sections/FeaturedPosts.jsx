@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -74,13 +76,13 @@ const FeaturedPosts = () => {
   );
 
   return (
-    <div className="mb-8">
+    <div className="mb-8 ">
       <Carousel
         infinite
         customLeftArrow={customLeftArrow}
         customRightArrow={customRightArrow}
         responsive={responsive}
-        itemClass="px-4"
+        itemClass="px-4 px-14"
       >
         {dataLoaded &&
           featuredPosts.map((post, index) => (
