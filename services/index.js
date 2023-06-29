@@ -438,3 +438,27 @@ export const Get_Articles = async () => {
 
   return result.articles;
 };
+
+export const Get_Affiliate = async () => {
+  const query = gql`
+    query GetAffiliate {
+      affiliate {
+        title
+        slug
+        content {
+          raw
+        }
+        featuredImage {
+          url
+        }
+        author {
+          name
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.affiliate;
+};
