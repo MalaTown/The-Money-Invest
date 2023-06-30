@@ -70,7 +70,7 @@ const Articles = () => {
         {articles.map((article) => (
           <div
             key={article.slug}
-            className="article w-1/3 m-4 lg:mx-8 lg:p-4 shadow-xl"
+            className="article w-2/5 md:w-1/3 m-4 lg:mx-8 lg:p-4 shadow-xl"
           >
             <div className="p-2">
               <img
@@ -79,8 +79,8 @@ const Articles = () => {
                 alt={article.title}
               />
             </div>
-            <div className="px-4">
-              <h3 className="text-lg font-semibold mb-2">{article.title}</h3>
+            <div className="md:px-4 sm:px-2">
+              <h3 className="text-sm md:text-lg font-semibold mb-2">{article.title}</h3>
               <div className=" flex items-center font-medium text-gray-700 mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

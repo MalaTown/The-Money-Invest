@@ -19,7 +19,7 @@ export default function News() {
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       {/* -------------------------------Top Section start------------------------------  */}
-      <h1 className="border-black border-y-2 my-4   ">Top News</h1>
+      <h1 className="border-black border-y-2 md:my-4   ">Top News</h1>
       <div className="container">
         <TopNews />
       </div>

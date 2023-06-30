@@ -4,7 +4,7 @@ import { gql, useQuery } from "@apollo/client";
 
 const GET_TOP_NEWS = gql`
   query GetTopNews {
-    newsPosts(where: { newsCategory: { slug: "top-news" } }, last: 3) {
+    newsPosts(where: { newsCategory: { slug: "top-news" } }, last: 4) {
       title
       slug
       excerpt
@@ -27,10 +27,10 @@ function TopNews() {
   return (
     <div
       // style={{ width: "1250px" }}
-      className="container flex items-center max-md:flex-col"
+      className="container flex items-center max-md:flex-col md:px-4"
     >
       <div
-        className="TopNews TopNews-type1 flex flex-col justify-end items-start p-1 border-2  border-black "
+        className="hidden md:block TopNews TopNews-type1 md:flex flex-col justify-end items-start p-1 border-2  border-black"
         style={{
           width: "25%",
           float: "left",
@@ -49,7 +49,7 @@ function TopNews() {
       </div>
 
       <div
-        className="TopNews TopNews-type1 flex flex-col justify-end items-start  p-1 border-2  border-black  "
+        className=" TopNews TopNews-type1 flex flex-col justify-end items-start  p-1 border-2  border-black  "
         style={{
           width: "50%",
           margin: "10px",
@@ -67,7 +67,7 @@ function TopNews() {
         {data.newsPosts[1].excerpt}
       </div>
 
-      {/* <div className="TopNewsBox2">
+      <div className="TopNewsBox2">
         <div
           className="TopNews TopNews-type2 flex flex-col justify-end items-start  p-1 border-2  border-black mb-2 max-md:mb-0"
           style={{
@@ -100,8 +100,8 @@ function TopNews() {
           </p>
           {data.newsPosts[3].excerpt}
         </div>
-      </div> */}
-      <div
+      </div>
+      {/* <div
         className="TopNews TopNews-type1 flex flex-col justify-end items-start p-1 border-2  border-black "
         style={{
           width: "25%",
@@ -118,7 +118,7 @@ function TopNews() {
           {data.newsPosts[2].title}
         </p>
         {data.newsPosts[2].excerpt}
-      </div>
+      </div> */}
     </div>
   );
 }
