@@ -52,7 +52,7 @@ export default function News() {
             <h1 className="border-black border-y-2 my-2 bg-white rounded-xl">
               Popular News
             </h1>
-            <div className="row grid grid-cols-12 gap-2">
+            <div className="row grid grid-cols-12 gap-2 ">
               <PopularNews />
             </div>
           </div>

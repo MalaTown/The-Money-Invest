@@ -4,7 +4,7 @@ import { gql, useQuery } from "@apollo/client";
 
 const GET_TOP_NEWS = gql`
   query GetTopNews {
-    newsPosts(where: { newsCategory: { slug: "top-news" } }, last: 4) {
+    newsPosts(where: { newsCategory: { slug: "top-news" } }, last: 3) {
       title
       slug
       excerpt
@@ -32,7 +32,7 @@ function TopNews() {
       <div
         className="TopNews TopNews-type1 flex flex-col justify-end items-start p-1 border-2  border-black "
         style={{
-          width: "27.5%",
+          width: "25%",
           float: "left",
           background: `
             linear-gradient(to bottom, rgba(0, 153, 247, 0.5), rgba(241, 23, 18, 0.5)),
@@ -51,7 +51,7 @@ function TopNews() {
       <div
         className="TopNews TopNews-type1 flex flex-col justify-end items-start  p-1 border-2  border-black  "
         style={{
-          width: "45%",
+          width: "50%",
           margin: "10px",
           background: `
             linear-gradient(to bottom, rgba(21, 153, 87, 0.5), rgba(0, 76, 153, 0.5)),
@@ -67,7 +67,7 @@ function TopNews() {
         {data.newsPosts[1].excerpt}
       </div>
 
-      <div className="TopNewsBox2">
+      {/* <div className="TopNewsBox2">
         <div
           className="TopNews TopNews-type2 flex flex-col justify-end items-start  p-1 border-2  border-black mb-2 max-md:mb-0"
           style={{
@@ -100,6 +100,24 @@ function TopNews() {
           </p>
           {data.newsPosts[3].excerpt}
         </div>
+      </div> */}
+      <div
+        className="TopNews TopNews-type1 flex flex-col justify-end items-start p-1 border-2  border-black "
+        style={{
+          width: "25%",
+          float: "left",
+          background: `
+            linear-gradient(to bottom, rgba(0, 153, 247, 0.5), rgba(241, 23, 18, 0.5)),
+            url(${data.newsPosts[2].featuredImage.url})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
+        <p className="font-bold bg-gray-400 text-white border px-1">
+          {data.newsPosts[2].title}
+        </p>
+        {data.newsPosts[2].excerpt}
       </div>
     </div>
   );
