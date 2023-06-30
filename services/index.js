@@ -429,6 +429,9 @@ export const Get_Articles = async () => {
         }
         author {
           name
+          photo{
+            url
+          }
         }
       }
     }
@@ -445,6 +448,7 @@ export const Get_Affiliates = async () => {
       affiliates {
         title
         slug
+        link
         content {
           raw
         }
@@ -453,6 +457,9 @@ export const Get_Affiliates = async () => {
         }
         author {
           name
+          photo {
+            url
+          }
         }
       }
     }
