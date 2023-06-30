@@ -429,6 +429,9 @@ export const Get_Articles = async () => {
         }
         author {
           name
+          photo{
+            url
+          }
         }
       }
     }
@@ -437,4 +440,32 @@ export const Get_Articles = async () => {
   const result = await request(graphqlAPI, query);
 
   return result.articles;
+};
+
+export const Get_Affiliates = async () => {
+  const query = gql`
+    query Get_Affiliates {
+      affiliates {
+        title
+        slug
+        link
+        content {
+          raw
+        }
+        featuredImage {
+          url
+        }
+        author {
+          name
+          photo {
+            url
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.affiliates;
 };
