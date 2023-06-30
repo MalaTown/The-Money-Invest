@@ -26,7 +26,7 @@ const GET_TRENDING_NEWS = gql`
 `;
 
 function TrendingNews() {
-  const limit = 5;
+  const limit = 4;
   const [currentPage, setCurrentPage] = useState(1);
 
   const { loading, error, data } = useQuery(GET_TRENDING_NEWS, {
@@ -58,7 +58,7 @@ function TrendingNews() {
       <div className="flex justify-around ">
         {!isFirstPage && (
           <button
-            className="bg-white px-2 border-2 border-black rounded-full hover:bg-black hover:text-white hover:border-white"
+            className="bg-white px-2 border-solid border-x border-black rounded-lg hover:bg-black hover:text-white hover:border-white"
             onClick={handlePrevious}
             disabled={currentPage === 1}
           >
@@ -66,7 +66,7 @@ function TrendingNews() {
           </button>
         )}
         <button
-          className="bg-white px-2 border-2 border-black rounded-full hover:bg-black hover:text-white hover:border-white"
+          className="bg-white px-2 border-solid border-x border-black rounded-lg hover:bg-black hover:text-white hover:border-white"
           onClick={handleNext}
           disabled={newsPosts.length < limit}
         >
