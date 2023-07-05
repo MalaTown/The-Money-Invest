@@ -93,7 +93,7 @@ const renderContent = (content, expand) => {
         {articles.map((article) => (
           <div
             key={article.slug}
-            className="article w-5/12 sm:w-2/5 m-4 lg:mx-8 lg:p-4 shadow-xl"
+            className="article w-5/12 sm:w-2/5 m-2 lg:mx-8 lg:p-4 shadow-xl"
           >
             <div className="p-2">
               <img
