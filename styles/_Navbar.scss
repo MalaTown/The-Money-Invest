@@ -130,7 +130,7 @@
                      border-bottom: 2px solid #262626;
                      transform: scaleY(2);
                      opacity: 0;
-                     transition: .3s;
+                     transition: .7s;
                  }
 
                  &:after {
@@ -143,7 +143,7 @@
                      background-color: white;
                      transform: scale(0);
                      opacity: 0;
-                     transition: .3s;
+                     transition: .7s;
                      z-index: -1;
                  }
 
