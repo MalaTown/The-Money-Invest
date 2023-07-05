@@ -143,7 +143,7 @@ const renderContent = (content, expand) => {
               )}
               {article.content.raw.children.length > 1 && (
                 <button
-                  className="text-sm text-blue-500 font-medium"
+                  className="text-sm font-medium border-solid rounded-xl px-2 text-darkblue bg-white transition duration-500 hover-bg-darkblue"
                   onClick={() => toggleExpand(article.slug)}
                 >
                   {expandedArticles.includes(article.slug)

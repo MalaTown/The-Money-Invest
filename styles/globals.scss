@@ -137,6 +137,14 @@ a {
 .bg-darkblue{
     background: #004274;
 }
+.hover-bg-darkblue:hover {
+    background: #004274;
+    color: white;
+}
 .text-darkblue{
     color: #004274;
+}
+
+.hover-text-darkblue:hover{
+color: #004274;
 }
