@@ -1,7 +1,6 @@
 /* eslint-disable */
 import Link from "next/link";
 import { useRouter } from "next/router";
-
 import { Author, NewsComments, NewsCommentsForm, Loader,NewsPostDetail } from "../../components";
 import { AdjacentPosts } from "../../sections";
 import { getNewsPosts, getNewsPostDetails } from "../../services";

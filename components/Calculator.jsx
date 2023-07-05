@@ -19,9 +19,9 @@ const CompoundInterestCalculator = () => {
 
   return (
     <div>
-      <h2 className="text-base text-white border-white font-bold ont-bold border-b-4 mb-2 text-center">
+      <h1 className="text-2xl text-white border-white font-semibold border-b-4 mb-2 text-center">
         Compound Interest Calculator
-      </h2>
+      </h1>
       <div className="bg-white p-2 rounded-lg">
         <div className="mb-4">
           <label className="block mb-2">Principal Amount:</label>
@@ -66,7 +66,7 @@ const CompoundInterestCalculator = () => {
         <div className="flex justify-center">
           <button
             onClick={calculateInterest}
-            className="border-solid px-4 py-2 border-black rounded-full bg-gray-600 text-white hover:bg-white hover:text-black transition duration-700"
+            className="border-solid px-4 my-4 border-black rounded-full bg-darkblue text-white hover:bg-white hover:text-black transition duration-700"
           >
             Calculate
           </button>

@@ -20,9 +20,8 @@ const Affiliates = () => {
   }, []);
 
   return (
-    <>
-      <title>Affiliate</title>
       <div className="flex flex-wrap justify-center">
+      <title>Affiliate</title>
         {affiliates.map((affiliate) => (
           <div
             key={affiliate.slug}
@@ -49,7 +48,6 @@ const Affiliates = () => {
           </div>
         ))}
       </div>
-    </>
   );
 };
 

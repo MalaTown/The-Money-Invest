@@ -96,6 +96,7 @@ function Quiz() {
   if (!started) {
     return (
       <div className="quizpage">
+        <title>Financial Quiz </title>
         <form className="bg-gray-100 text-black my-4 p-8 border-double border-2 border-black shadow-md rounded-2xl shadow-slate-400 width-30 max-md:w-4/5">
           <label
             htmlFor="name"
@@ -145,6 +146,7 @@ function Quiz() {
     const { correctAnswers, totalQuestions, percentage } = calculateResult();
     return (
       <div className="result-page flex flex-col items-center justify-center h-screen bg-gray-100">
+        <title>Financial Quiz </title>
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold mb-4">Result</h1>
           <p className="text-xl">
@@ -162,12 +164,12 @@ function Quiz() {
             Percentage: <span className="font-semibold">{percentage}%</span>
           </p>
           <div className="flex justify-center">
-          <button
-            onClick={handleRestart}
-            className="btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md mt-4"
-          >
-            Restart Quiz
-          </button>
+            <button
+              onClick={handleRestart}
+              className="btn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md mt-4"
+            >
+              Restart Quiz
+            </button>
           </div>
         </div>
       </div>

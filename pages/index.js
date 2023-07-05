@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       <Head>
-        <title>TheMoneyInvest</title>
+        <title>The Money Invest - Financial News, Financial Blogs & Articles</title>
       </Head>
       <div className="App" id="outer-container">
         <Content />
