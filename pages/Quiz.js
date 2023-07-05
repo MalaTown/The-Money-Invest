@@ -130,7 +130,7 @@ function Quiz() {
         <button
           onClick={handleStartClick}
           id="start-btn"
-          className="btn bg-pink-600 mt-2 px-2 rounded-full border-black border-2 shadow-md shadow-black hover:bg-pink-500 hover:text-white hover:shadow-pink-800 transition-transform hover:border-y-transparent"
+          className="btn bg-darkblue mt-2 px-2 rounded-full border-black border-2 shadow-md shadow-black hover:bg-blue-800 hover:text-white hover:shadow-blue-800 transition-transform hover:border-y-transparent"
         >
           Start
         </button>
@@ -202,7 +202,7 @@ function Quiz() {
                   }
                 }}
               >
-                {option} {" "}
+                {option}{" "}
                 {showAnswer && isCorrect && <FontAwesomeIcon icon={faCheck} />}
               </li>
             );
@@ -211,7 +211,7 @@ function Quiz() {
       </div>
       <button
         onClick={handleNextQuestion}
-        className="text-lg border-solid border-black border-y-2 rounded-full bg-pink-600 text-white hover:bg-white hover:text-black transition duration-700 p-0.5 px-2 mt-2"
+        className="text-lg border-solid border-black border-y-2 rounded-full bg-darkblue text-white hover:bg-white hover:text-black transition duration-700 p-0.5 px-2 mt-2"
       >
         {currentQuestionIndex < quizQuestions.length - 1
           ? "Next Question"

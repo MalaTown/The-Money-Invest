@@ -1,9 +1,5 @@
 /* eslint-disable */
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { solid, regular, brands, icon, duotone } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
@@ -13,7 +9,6 @@ function Header() {
       <div>
         <Sidebar pageWrapId="page-wrap" outerContainerId="outer-container" />
       </div>
-      <Link href="/" style={{ textDecoration: "none" }}>
         <div
           className="headerBox">
           <img
@@ -26,7 +21,6 @@ function Header() {
             <h1 className="headingText"> The Money Invest </h1>
 
         </div>
-      </Link>
       <Navbar />
     </div>
   );

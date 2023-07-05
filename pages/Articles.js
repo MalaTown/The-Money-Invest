@@ -7,28 +7,17 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const fetchArticles = async () => {
+    async function fetchArticles() {
       try {
         const fetchedArticles = await Get_Articles();
         setArticles(fetchedArticles);
       } catch (error) {
         console.error("Error fetching articles:", error);
       }
-    };
+    }
 
     fetchArticles();
   }, []);
-
-  const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      const truncated = text.substr(0, maxLength);
-      const lastSpaceIndex = truncated.lastIndexOf(" ");
-      if (lastSpaceIndex !== -1) {
-        return truncated.substr(0, lastSpaceIndex) + "...";
-      }
-    }
-    return text;
-  };
 
   const [expandedArticles, setExpandedArticles] = useState([]);
 
@@ -39,29 +28,63 @@ const Articles = () => {
       setExpandedArticles([...expandedArticles, slug]);
     }
   };
+const renderContent = (content, expand) => {
+  let displayContent = content;
+  if (!expand) {
+    const wordLimit = 20; // Number of words to display
+    let wordCount = 0;
+    displayContent = [];
 
-  const renderContent = (content) => {
-    return content.map((element, index) => {
+    for (let i = 0; i < content.length; i++) {
+      const element = content[i];
+
       if (element.type === "paragraph") {
-        return (
-          <p key={index} className="text-sm mb-4">
-            {element.children.map((child, childIndex) => (
-              <span key={childIndex}>{child.text} </span>
-            ))}
-          </p>
-        );
+        const words = element.children
+          .map((child) => child.text.split(" "))
+          .flat();
+        if (wordCount + words.length <= wordLimit) {
+          // Add entire paragraph if word count is within limit
+          displayContent.push(element);
+          wordCount += words.length;
+        } else {
+          // Add partial paragraph to reach word limit
+          const remainingWords = wordLimit - wordCount;
+          const partialWords = words.slice(0, remainingWords);
+          const partialText = partialWords.join(" ");
+          const partialElement = {
+            type: "paragraph",
+            children: [{ text: partialText }],
+          };
+          displayContent.push(partialElement);
+          break; // Stop processing further paragraphs
+        }
       } else if (element.type === "heading-four") {
-        return (
-          <h4 key={index} className="text-md font-semibold mb-4">
-            {element.children.map((child, childIndex) => (
-              <span key={childIndex}>{child.text} </span>
-            ))}
-          </h4>
-        );
+        displayContent.push(element);
       }
-      return null;
-    });
-  };
+    }
+  }
+
+  return displayContent.map((element, index) => {
+    if (element.type === "paragraph") {
+      return (
+        <p key={index} className="text-sm mb-4">
+          {element.children.map((child, childIndex) => (
+            <span key={childIndex}>{child.text} </span>
+          ))}
+        </p>
+      );
+    } else if (element.type === "heading-four") {
+      return (
+        <h4 key={index} className="text-md font-semibold mb-4">
+          {element.children.map((child, childIndex) => (
+            <span key={childIndex}>{child.text} </span>
+          ))}
+        </h4>
+      );
+    }
+    return null;
+  });
+};
 
   return (
     <>
@@ -70,7 +93,7 @@ const Articles = () => {
         {articles.map((article) => (
           <div
             key={article.slug}
-            className="article w-2/5 md:w-1/3 m-4 lg:mx-8 lg:p-4 shadow-xl"
+            className="article w-5/12 sm:w-2/5 m-4 lg:mx-8 lg:p-4 shadow-xl"
           >
             <div className="p-2">
               <img
@@ -79,9 +102,11 @@ const Articles = () => {
                 alt={article.title}
               />
             </div>
-            <div className="md:px-4 sm:px-2">
-              <h3 className="text-sm md:text-lg font-semibold mb-2">{article.title}</h3>
-              <div className=" flex items-center font-medium text-gray-700 mb-4">
+            <div className="md:px-4 px-2">
+              <h3 className="text-sm md:text-lg font-semibold mb-2">
+                {article.title}
+              </h3>
+              <div className="flex items-center font-medium text-gray-700 mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 inline mr-2 text-pink-500"
@@ -112,20 +137,19 @@ const Articles = () => {
                   </p>
                 </div>
               </div>
-              {expandedArticles.includes(article.slug) ? (
-                renderContent(article.content.raw.children)
-              ) : (
-                <>
-                  {renderContent(article.content.raw.children.slice(0, 1))}
-                  {article.content.raw.children.length > 1 && (
-                    <button
-                      className="text-sm text-blue-500 font-medium"
-                      onClick={() => toggleExpand(article.slug)}
-                    >
-                      Read More
-                    </button>
-                  )}
-                </>
+              {renderContent(
+                article.content.raw.children,
+                expandedArticles.includes(article.slug)
+              )}
+              {article.content.raw.children.length > 1 && (
+                <button
+                  className="text-sm text-blue-500 font-medium"
+                  onClick={() => toggleExpand(article.slug)}
+                >
+                  {expandedArticles.includes(article.slug)
+                    ? "Read Less"
+                    : "Read More"}
+                </button>
               )}
             </div>
           </div>
