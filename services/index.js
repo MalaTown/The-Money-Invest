@@ -183,6 +183,37 @@ export const getNewsPostDetails = async (slug) => {
 
   return result.newsPosts[0];
 };
+export const GetArticleDetails = async (slug) => {
+  const query = gql`
+    query GetArticleDetails($slug: String!) {
+      articles(where: { slug: $slug }) {
+        author {
+          name
+          bio
+          photo {
+            url
+          }
+        }
+        title
+        slug
+        publishedAt
+        featuredImage {
+          url
+        }
+        content {
+          raw
+        }
+      }
+    }
+  `;
+
+  const variables = { slug };
+
+  const result = await request(graphqlAPI, query, variables);
+
+  return result.articles[0]; // Access the first article in the response array
+};
+
 
 export const getSimilarPosts = async (categories, slug) => {
   const query = gql`
@@ -429,7 +460,7 @@ export const Get_Articles = async () => {
         }
         author {
           name
-          photo{
+          photo {
             url
           }
         }
@@ -449,6 +480,7 @@ export const Get_Affiliates = async () => {
         title
         slug
         link
+        buttonName
         content {
           raw
         }

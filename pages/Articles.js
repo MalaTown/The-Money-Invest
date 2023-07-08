@@ -1,9 +1,10 @@
 /* eslint-disable */
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { Get_Articles } from "../services";
 import moment from "moment";
 
-const Articles = () => {
+export default function Articles() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -19,21 +20,11 @@ const Articles = () => {
     fetchArticles();
   }, []);
 
-  const [expandedArticles, setExpandedArticles] = useState([]);
-
-  const toggleExpand = (slug) => {
-    if (expandedArticles.includes(slug)) {
-      setExpandedArticles(expandedArticles.filter((s) => s !== slug));
-    } else {
-      setExpandedArticles([...expandedArticles, slug]);
-    }
-  };
-const renderContent = (content, expand) => {
-  let displayContent = content;
-  if (!expand) {
+  const renderContent = (content) => {
     const wordLimit = 20; // Number of words to display
+
+    let displayContent = [];
     let wordCount = 0;
-    displayContent = [];
 
     for (let i = 0; i < content.length; i++) {
       const element = content[i];
@@ -62,29 +53,28 @@ const renderContent = (content, expand) => {
         displayContent.push(element);
       }
     }
-  }
 
-  return displayContent.map((element, index) => {
-    if (element.type === "paragraph") {
-      return (
-        <p key={index} className="text-sm mb-4">
-          {element.children.map((child, childIndex) => (
-            <span key={childIndex}>{child.text} </span>
-          ))}
-        </p>
-      );
-    } else if (element.type === "heading-four") {
-      return (
-        <h4 key={index} className="text-md font-semibold mb-4">
-          {element.children.map((child, childIndex) => (
-            <span key={childIndex}>{child.text} </span>
-          ))}
-        </h4>
-      );
-    }
-    return null;
-  });
-};
+    return displayContent.map((element, index) => {
+      if (element.type === "paragraph") {
+        return (
+          <p key={index} className="text-sm mb-4">
+            {element.children.map((child, childIndex) => (
+              <span key={childIndex}>{child.text} </span>
+            ))}
+          </p>
+        );
+      } else if (element.type === "heading-four") {
+        return (
+          <h4 key={index} className="text-md font-semibold mb-4">
+            {element.children.map((child, childIndex) => (
+              <span key={childIndex}>{child.text} </span>
+            ))}
+          </h4>
+        );
+      }
+      return null;
+    });
+  };
 
   return (
     <>
@@ -137,19 +127,13 @@ const renderContent = (content, expand) => {
                   </p>
                 </div>
               </div>
-              {renderContent(
-                article.content.raw.children,
-                expandedArticles.includes(article.slug)
-              )}
+              {renderContent(article.content.raw.children)}
               {article.content.raw.children.length > 1 && (
-                <button
-                  className="text-sm font-medium border-solid rounded-xl px-2 text-darkblue bg-white transition duration-500 hover-bg-darkblue"
-                  onClick={() => toggleExpand(article.slug)}
-                >
-                  {expandedArticles.includes(article.slug)
-                    ? "Read Less"
-                    : "Read More"}
-                </button>
+                <Link legacyBehavior href={`/articles/${article.slug}`}>
+                  <a className="text-sm font-medium border-solid rounded-xl px-2 text-darkblue bg-white transition duration-500 hover-bg-darkblue">
+                    Read More
+                  </a>
+                </Link>
               )}
             </div>
           </div>
@@ -157,6 +141,12 @@ const renderContent = (content, expand) => {
       </div>
     </>
   );
-};
+}
 
-export default Articles;
+
+export async function getStaticProps() {
+  const Articles = (await Get_Articles()) || [];
+  return {
+    props: { Articles },
+  };
+}
