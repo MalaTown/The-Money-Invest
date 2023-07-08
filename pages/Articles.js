@@ -20,61 +20,70 @@ export default function Articles() {
     fetchArticles();
   }, []);
 
-  const renderContent = (content) => {
-    const wordLimit = 20; // Number of words to display
+const renderContent = (content) => {
+  const wordLimit = 17; // Number of words to display
 
-    let displayContent = [];
-    let wordCount = 0;
+  let displayContent = [];
+  let wordCount = 0;
+  let isTruncated = false;
 
-    for (let i = 0; i < content.length; i++) {
-      const element = content[i];
+  for (let i = 0; i < content.length; i++) {
+    const element = content[i];
 
-      if (element.type === "paragraph") {
-        const words = element.children
-          .map((child) => child.text.split(" "))
-          .flat();
-        if (wordCount + words.length <= wordLimit) {
-          // Add entire paragraph if word count is within limit
-          displayContent.push(element);
-          wordCount += words.length;
-        } else {
-          // Add partial paragraph to reach word limit
-          const remainingWords = wordLimit - wordCount;
-          const partialWords = words.slice(0, remainingWords);
-          const partialText = partialWords.join(" ");
-          const partialElement = {
-            type: "paragraph",
-            children: [{ text: partialText }],
-          };
-          displayContent.push(partialElement);
-          break; // Stop processing further paragraphs
-        }
-      } else if (element.type === "heading-four") {
+    if (element.type === "paragraph") {
+      const words = element.children
+        .map((child) => child.text.split(" "))
+        .flat();
+
+      if (wordCount + words.length <= wordLimit) {
+        // Add entire paragraph if word count is within limit
         displayContent.push(element);
+        wordCount += words.length;
+      } else {
+        // Add partial paragraph to reach word limit
+        const remainingWords = wordLimit - wordCount;
+        const partialWords = words.slice(0, remainingWords);
+        const partialText = partialWords.join(" ");
+        const partialElement = {
+          type: "paragraph",
+          children: [{ text: partialText }],
+        };
+        displayContent.push(partialElement);
+        isTruncated = true;
+        break; // Stop processing further paragraphs
       }
+    } else if (element.type === "heading-four") {
+      displayContent.push(element);
     }
+  }
 
-    return displayContent.map((element, index) => {
-      if (element.type === "paragraph") {
-        return (
-          <p key={index} className="text-sm mb-4">
-            {element.children.map((child, childIndex) => (
-              <span key={childIndex}>{child.text} </span>
-            ))}
-          </p>
-        );
-      } else if (element.type === "heading-four") {
-        return (
-          <h4 key={index} className="text-md font-semibold mb-4">
-            {element.children.map((child, childIndex) => (
-              <span key={childIndex}>{child.text} </span>
-            ))}
-          </h4>
-        );
-      }
-      return null;
-    });
-  };
+  return (
+    <>
+      {displayContent.map((element, index) => {
+        if (element.type === "paragraph") {
+          return (
+            <p key={index} className="text-sm mb-4">
+              {element.children.map((child, childIndex) => (
+                <span key={childIndex}>{child.text} </span>
+              ))}
+              {isTruncated && " ..."}
+            </p>
+          );
+        } else if (element.type === "heading-four") {
+          return (
+            <h4 key={index} className="text-md font-semibold mb-4">
+              {element.children.map((child, childIndex) => (
+                <span key={childIndex}>{child.text} </span>
+              ))}
+            </h4>
+          );
+        }
+        return null;
+      })}
+    </>
+  );
+};
+
 
   return (
     <>
@@ -87,7 +96,7 @@ export default function Articles() {
           >
             <div className="p-2">
               <img
-                className="rounded-lg"
+                className="rounded-lg w-full h-1/2"
                 src={article.featuredImage.url}
                 alt={article.title}
               />
@@ -130,9 +139,11 @@ export default function Articles() {
               {renderContent(article.content.raw.children)}
               {article.content.raw.children.length > 1 && (
                 <Link legacyBehavior href={`/articles/${article.slug}`}>
-                  <a className="text-sm font-medium border-solid rounded-xl px-2 text-darkblue bg-white transition duration-500 hover-bg-darkblue">
+                <div className="flex justify-center">
+                  <a className="text-lg font-semibold border-darkblue border-black rounded-xl px-2 text-darkblue bg-white transition duration-500 hover-bg-darkblue ">
                     Read More
                   </a>
+                </div>
                 </Link>
               )}
             </div>
