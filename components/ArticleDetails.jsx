@@ -62,7 +62,7 @@ const getContentFragment = (index, text, obj, type) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-      <div className="overflow-hidden shadow-md mb-6 flex justify-center ">
+      <div className="overflow-hidden mb-6 flex justify-center w-auto ">
         <img
           src={post.featuredImage.url}
           alt=""

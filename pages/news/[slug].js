@@ -26,13 +26,11 @@ export default function NewsPostDetailPage({ post }) {
   // Updated component name to avoid recursion
 
   return (
-    <div className="container mx-auto px-10 mb-8 ">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div className="container mx-auto px-10 mb-8 center ">
+      <div className="grid grid-cols-1 gap-12">
         <div className="col-span-1 lg:col-span-8  border-black border-2 p-2 rounded-lg">
           <NewsPostDetail post={post} />
           <Author author={post.author} />
-          {/* <NewsCommentsForm slug={post.slug} />
-          <NewsComments slug={post.slug} /> */}
           <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
         </div>
         <div className="col-span-1 lg:col-span-4">

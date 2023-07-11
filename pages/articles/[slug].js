@@ -34,12 +34,6 @@ export default function ArticlesDetail ({ post }) {
           <ArticleDetails post={post} />
           <Author author={post.author} />
         </div>
-        <div className="col-span-1 lg:col-span-4">
-          <div
-            className="relative lg:sticky top-8"
-            style={{ zIndex: "-1", paddingTop: "10rem" }}
-          ></div>
-        </div>
       </div>
     </div>
   );

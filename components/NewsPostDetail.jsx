@@ -4,10 +4,6 @@ import moment from "moment";
 
 const NewsPostDetail = ({ post }) => {
 
-    if (!post || !post.featuredImage || !post.featuredImage.url) {
-      // Handle the case where the post or featuredImage is undefined
-      return null;
-    }
  const getContentFragment = (index, text, obj, type) => {
    let modifiedText = text;
 
@@ -68,11 +64,11 @@ const NewsPostDetail = ({ post }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-      <div className="overflow-hidden shadow-md mb-6">
+      <div className="overflow-hidden mb-6 flex justify-center">
         <img
           src={post.featuredImage.url}
           alt=""
-          className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg"
+          className="object-top h-full lg:w-1/2 w-full object-cover rounded-t-lg lg:rounded-lg "
         />
       </div>
       <div className="px-4 lg:px-0">
