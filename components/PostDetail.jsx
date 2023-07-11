@@ -3,62 +3,57 @@ import React from "react";
 import moment from "moment";
 
 function PostDetail({ post }) {
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;
+const getContentFragment = (index, text, obj, type) => {
+  let modifiedText = text;
+  let textStyle = {};
 
-    if (obj) {
-      if (obj.bold) {
-        modifiedText = <b key={index}>{text}</b>;
-      }
-
-      if (obj.italic) {
-        modifiedText = <em key={index}>{text}</em>;
-      }
-
-      if (obj.underline) {
-        modifiedText = <u key={index}>{text}</u>;
-      }
+  if (obj) {
+    if (obj.bold) {
+      textStyle.fontWeight = "bold";
     }
 
-    switch (type) {
-      case "heading-three":
-        return (
-          <h3 key={index} className="text-xl font-semibold mb-4">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h3>
-        );
-      case "paragraph":
-        return (
-          <p key={index} className="mb-8">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </p>
-        );
-      case "heading-four":
-        return (
-          <h4 key={index} className="text-md font-semibold mb-4">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h4>
-        );
-      case "image":
-        return (
-          <img
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          />
-        );
-      default:
-        return modifiedText;
+    if (obj.italic) {
+      textStyle.fontStyle = "italic";
     }
-  };
+
+    if (obj.underline) {
+      textStyle.textDecoration = "underline";
+    }
+  }
+
+  switch (type) {
+    case "heading-three":
+      return (
+        <h3 key={index} className="text-xl font-semibold mb-4">
+          <span style={textStyle}>{modifiedText}</span>
+        </h3>
+      );
+    case "paragraph":
+      return (
+        <p key={index} className="mb-8">
+          <span style={textStyle}>{modifiedText}</span>
+        </p>
+      );
+    case "heading-four":
+      return (
+        <h4 key={index} className="text-md font-semibold mb-4">
+          <span style={textStyle}>{modifiedText}</span>
+        </h4>
+      );
+    case "image":
+      return (
+        <img
+          key={index}
+          alt={obj.title}
+          height={obj.height}
+          width={obj.width}
+          src={obj.src}
+        />
+      );
+    default:
+      return <span style={textStyle}>{modifiedText}</span>;
+  }
+};
 
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
@@ -86,7 +81,7 @@ function PostDetail({ post }) {
           <div className="font-medium text-gray-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 inline mr-2 bg-darkblue"
+              className="h-6 w-6 inline mr-2"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

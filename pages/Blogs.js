@@ -16,7 +16,7 @@ export default function Home({ posts }) {
           ))}
         </div>
         <div className="lg:col-span-4 col-span-1 ">
-          <div className="lg:sticky top-40 bottom-0" style={{ zIndex: "-1" }}>
+          <div className="lg:sticky top-40 bottom-0">
             <PostWidget />
             <Categories />
           </div>

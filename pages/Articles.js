@@ -25,7 +25,6 @@ const renderContent = (content) => {
 
   let displayContent = [];
   let wordCount = 0;
-  let isTruncated = false;
 
   for (let i = 0; i < content.length; i++) {
     const element = content[i];
@@ -34,7 +33,6 @@ const renderContent = (content) => {
       const words = element.children
         .map((child) => child.text.split(" "))
         .flat();
-
       if (wordCount + words.length <= wordLimit) {
         // Add entire paragraph if word count is within limit
         displayContent.push(element);
@@ -49,7 +47,6 @@ const renderContent = (content) => {
           children: [{ text: partialText }],
         };
         displayContent.push(partialElement);
-        isTruncated = true;
         break; // Stop processing further paragraphs
       }
     } else if (element.type === "heading-four") {
@@ -57,31 +54,42 @@ const renderContent = (content) => {
     }
   }
 
-  return (
-    <>
-      {displayContent.map((element, index) => {
-        if (element.type === "paragraph") {
-          return (
-            <p key={index} className="text-sm mb-4">
-              {element.children.map((child, childIndex) => (
-                <span key={childIndex}>{child.text} </span>
-              ))}
-              {isTruncated && " ..."}
-            </p>
-          );
-        } else if (element.type === "heading-four") {
-          return (
-            <h4 key={index} className="text-md font-semibold mb-4">
-              {element.children.map((child, childIndex) => (
-                <span key={childIndex}>{child.text} </span>
-              ))}
-            </h4>
-          );
-        }
-        return null;
-      })}
-    </>
-  );
+  const lastWordIndex = wordLimit - 1;
+  const lastWord =
+    displayContent[0]?.children[0]?.text.split(" ")[lastWordIndex];
+
+  if (lastWord) {
+    const slicedText = displayContent[0]?.children[0]?.text
+      .split(" ")
+      .slice(0, lastWordIndex)
+      .join(" ");
+    const slicedElement = {
+      type: "paragraph",
+      children: [{ text: slicedText + "..." }],
+    };
+    displayContent[0] = slicedElement;
+  }
+
+  return displayContent.map((element, index) => {
+    if (element.type === "paragraph") {
+      return (
+        <p key={index} className="text-sm mb-4">
+          {element.children.map((child, childIndex) => (
+            <span key={childIndex}>{child.text} </span>
+          ))}
+        </p>
+      );
+    } else if (element.type === "heading-four") {
+      return (
+        <h4 key={index} className="text-md font-semibold mb-4">
+          {element.children.map((child, childIndex) => (
+            <span key={childIndex}>{child.text} </span>
+          ))}
+        </h4>
+      );
+    }
+    return null;
+  });
 };
 
 
