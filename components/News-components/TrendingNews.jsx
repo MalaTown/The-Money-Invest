@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useQuery, gql } from "@apollo/client";
 import NewsPostCard from "./NewsPostCard";
 
-
 const GET_TRENDING_NEWS = gql`
   query GetTrendingNews($skip: Int, $limit: Int) {
     newsPosts(
@@ -35,6 +34,14 @@ function TrendingNews() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
+
+  if (!data.newsPosts.length) {
+    return (
+      <div className="container">
+        <p>No news found.</p>
+      </div>
+    );
+  }
 
   const { newsPosts } = data;
 

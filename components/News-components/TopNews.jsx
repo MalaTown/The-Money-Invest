@@ -23,6 +23,14 @@ function TopNews() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
+  
+  if (!data.newsPosts.length) {
+    return (
+      <div className="container">
+        <p>No news found.</p>
+      </div>
+    );
+  }
 
   return (
     <div
