@@ -29,10 +29,10 @@ const HomePage = () => {
         {recentPosts.map((post) => (
           <div
             key={post.slug}
-            className="recent-post border-2 border-black p-2 rounded-lg w-full lg:w-2/6 lg:mx-4 sm:place-content-center h-auto"
+            className="recent-post border-2 border-black p-2 rounded-lg w-full lg:w-2/6 lg:mx-4 sm:place-content-center h-auto flex justify-around flex-col"
           >
-            <img src={post.featuredImage.url} alt={post.title} className=" " />
-            <div className="flex flex-col items-center text-center mt-2 h-1/2">
+            <img src={post.featuredImage.url} alt={post.title} className="h-48 md:h-full  " />
+            <div className="flex flex-col items-center text-center mt-2">
               <Link href={`/post/${post.slug}`}>{post.title}</Link>
               <Link href={`/post/${post.slug}`}>
                 <span className="text-sm border-solid border-2 border-black rounded-full bg-darkblue text-white hover:bg-white hover:text-black w-2/4 transition duration-700 p-0.5 px-2 mt-2">
